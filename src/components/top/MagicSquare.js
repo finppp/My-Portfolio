@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import * as colourSwatch from '../../variables/colours';
+import { database } from '../../database';
+
 
 class MagicSquare extends Component {
   constructor(props) {
@@ -9,22 +11,21 @@ class MagicSquare extends Component {
   }
 
   colourChange = (newColourNumber) => {
+    let squareNumber = this.props.squareNumber;
     switch (newColourNumber) {
       case 1:
-
-        break;
       case 2:
-
-        break;
       case 3:
-
-        break;
       case 4:
 
         break;
       default:
         console.log("newColourNumber does not match the switch. this is a problem");
     }
+
+    database.ref('/magic-squares/').update({
+      [squareNumber]  : newColourNumber
+    });
     // console.log(newColourNumber, this.props.squareNumber);
     //write to firebase
   }
@@ -61,7 +62,8 @@ class MagicSquare extends Component {
       )
         break;
       default:
-
+      console.log("current number doesnt match switch");
+      return null
     }
   }
 
