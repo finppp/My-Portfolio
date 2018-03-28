@@ -8,7 +8,6 @@ class MagicSquare extends Component {
     this.state = {};
   }
 
-                  //current colour
   colourChange = (newColourNumber) => {
     switch (newColourNumber) {
       case 1:
@@ -26,7 +25,7 @@ class MagicSquare extends Component {
       default:
         console.log("newColourNumber does not match the switch. this is a problem");
     }
-    console.log(newColourNumber, this.props.squareNumber);
+    // console.log(newColourNumber, this.props.squareNumber);
     //write to firebase
   }
 
