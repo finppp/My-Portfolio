@@ -6,10 +6,11 @@ import FinlayText from './FinlayText';
 
 class Top extends Component {
 
+
   render() {
     return (
       <TopContainer>
-        <MagicSquares/>
+        <MagicSquares />
         {/* <FinlayText/> */}
       </TopContainer>
     );

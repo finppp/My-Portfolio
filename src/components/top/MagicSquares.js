@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import MagicSquare from './MagicSquare';
-
+import database from '../../database';
 class MagicSquares extends Component {
 
   render() {
