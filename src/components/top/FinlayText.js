@@ -18,6 +18,7 @@ class FinlayText extends Component {
 export default FinlayText;
 
 const AbsoluteContainer = styled.section`
+  pointer-events: none;
   top: 0;
   left: 0;
   position: absolute;
@@ -34,10 +35,12 @@ const HeadingContainer = styled.div`
 const HeadingText = styled.h1`
   width: 50%;
   font-size: 13vw;
-  font-weight: 600;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  line-height: 13vw;
+  color: rgb(75, 61, 119);
+  font-family: 'Nunito', sans-serif;
 `
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Open Sans', sans-serif;
 // font-family: 'Montserrat', sans-serif;
+// font-family: 'Nunito', sans-serif;

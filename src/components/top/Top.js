@@ -11,7 +11,7 @@ class Top extends Component {
     return (
       <TopContainer>
         <MagicSquares />
-        {/* <FinlayText/> */}
+        <FinlayText/>
       </TopContainer>
     );
   }
