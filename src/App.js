@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Top from './components/top/Top';
+import Middle from './components/middle/Middle';
 import styled from 'styled-components';
 
 class App extends Component {
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <FullContainer className="App">
         <Top/>
+        <Middle/>
       </FullContainer>
     );
   }

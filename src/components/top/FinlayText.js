@@ -33,5 +33,11 @@ const HeadingContainer = styled.div`
 `
 const HeadingText = styled.h1`
   width: 50%;
-  font-size: 5em;
+  font-size: 13vw;
+  font-weight: 600;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 `
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Montserrat', sans-serif;
