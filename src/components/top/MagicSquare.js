@@ -8,32 +8,55 @@ class MagicSquare extends Component {
     this.state = {};
   }
 
+                  //current colour
+  colourChange = (newColourNumber) => {
+    switch (newColourNumber) {
+      case 1:
+
+        break;
+      case 2:
+
+        break;
+      case 3:
+
+        break;
+      case 4:
+
+        break;
+      default:
+        console.log("newColourNumber does not match the switch. this is a problem");
+    }
+    console.log(newColourNumber, this.props.squareNumber);
+    //write to firebase
+  }
+
+
   render() {
     switch (this.props.currentColourNumber) {
       case 1:
       return (
-        <ColourOneDiv>
+        <ColourOneDiv onMouseEnter={() => this.colourChange(2)}>
           &nbsp;
         </ColourOneDiv>
       )
         break;
       case 2:
       return (
-        <ColourTwoDiv>
+        <ColourTwoDiv onMouseEnter={() => this.colourChange(3)}>
           &nbsp;
         </ColourTwoDiv>
       )
         break;
       case 3:
       return (
-        <ColourThreeDiv>
+        <ColourThreeDiv onMouseEnter={() => this.colourChange(4)}>
           &nbsp;
         </ColourThreeDiv>
       )
         break;
       case 4:
       return (
-        <ColourFourDiv>
+        <ColourFourDiv onMouseEnter={() => this.colourChange(1)}>
           &nbsp;
         </ColourFourDiv>
       )
@@ -49,34 +72,27 @@ class MagicSquare extends Component {
 
 export default MagicSquare;
 
-const ColourOneDiv = styled.div`
+
+const BoxDiv = styled.div`
+  border-radius: 1vw;
   display: inline-block;
   width: 4.8vw;
   height: 4.8vw;
   margin: 0.2vw;
+`
+
+const ColourOneDiv = BoxDiv.extend`
   background-color: ${colourSwatch.colours[0]};
 `
 
-const ColourTwoDiv = styled.div`
-  display: inline-block;
-  width: 4.8vw;
-  height: 4.8vw;
-  margin: 0.2vw;
+const ColourTwoDiv = BoxDiv.extend`
   background-color: ${colourSwatch.colours[1]};
 `
 
-const ColourThreeDiv = styled.div`
-  display: inline-block;
-  width: 4.8vw;
-  height: 4.8vw;
-  margin: 0.2vw;
+const ColourThreeDiv = BoxDiv.extend`
   background-color: ${colourSwatch.colours[2]};
 `
 
-const ColourFourDiv = styled.div`
-  display: inline-block;
-  width: 4.8vw;
-  height: 4.8vw;
-  margin: 0.2vw;
+const ColourFourDiv = BoxDiv.extend`
   background-color: ${colourSwatch.colours[3]};
 `

@@ -28,8 +28,7 @@ function generateMagicSquares(squareCount) {
 
   for (var i = 0; i < squareCount; i++) {
     let randomNumber = Math.floor((Math.random() * 4) + 1);
-    console.log(randomNumber);
-    squares.push(<MagicSquare key={i} currentColourNumber={randomNumber}/>);
+    squares.push(<MagicSquare key={i} squareNumber={i} currentColourNumber={randomNumber}/>);
   }
 
   return(
