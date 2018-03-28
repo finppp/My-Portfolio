@@ -22,5 +22,6 @@ export default Top;
 const TopContainer = styled.section `
   background-color: red;
   width: 100%;
+  position: relative;
 `
   // height:100%;
