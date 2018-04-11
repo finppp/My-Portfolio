@@ -23,11 +23,16 @@ class MagicSquare extends Component {
         console.log("newColourNumber does not match the switch. this is a problem");
     }
 
-    database.ref('/magic-squares/').update({
-      [squareNumber]  : newColourNumber
-    });
-    // console.log(newColourNumber, this.props.squareNumber);
-    //write to firebase
+    let disabled = false;
+    // comment out the below line to enable writing to the database(this is to save on database writes during testing)
+    // disabled = true;
+
+    if (!disabled) {
+      //write to Firebase database
+      database.ref('/magic-squares/').update({
+        [squareNumber]  : newColourNumber
+      });
+    }
   }
 
 
@@ -75,11 +80,17 @@ export default MagicSquare;
 
 
 const BoxDiv = styled.div`
-  border-radius: 1vw;
+  border-radius: 0.3vw;
   display: inline-block;
   width: 4.8vw;
   height: 4.8vw;
   margin: 0.2vw;
+
+  @media (max-width: 1200px) {
+    width: 9.6vw;
+    height: 9.6vw;
+    margin: 0.4vw;
+  }
 `
 
 const ColourOneDiv = BoxDiv.extend`

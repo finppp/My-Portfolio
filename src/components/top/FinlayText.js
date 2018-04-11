@@ -33,7 +33,8 @@ const HeadingContainer = styled.div`
   justify-content: center;
 `
 const HeadingText = styled.h1`
-  width: 50%;
+  letter-spacing: 2vw;
+  width: 70%;
   font-size: 13vw;
   font-weight: 800;
   line-height: 13vw;
