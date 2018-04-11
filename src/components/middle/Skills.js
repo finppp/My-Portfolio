@@ -10,9 +10,24 @@ import cssSVG from '../../icons/css3.svg'
 import githubSVG from '../../icons/github.svg'
 import photoshopSVG from '../../icons/photoshop.svg'
 import illustratorSVG from '../../icons/illustrator.svg'
+import javascriptSVG from '../../icons/javascript.svg'
+import googleSVG from '../../icons/google.svg'
+import cloudSVG from '../../icons/cloud.svg'
+import htmlSVG from '../../icons/html5.svg'
+import wordpressSVG from '../../icons/wordpress.svg'
+import cSVG from '../../icons/c.svg'
+import seoSVG from '../../icons/seo.svg'
 // import gitSVG from '../../icons/git.svg'
 
 const skillData = [
+  {
+    title: "Javascript",
+    icon: javascriptSVG
+  },
+  {
+    title: "React.js",
+    icon: reactSVG
+  },
   {
     title: "Firebase",
     icon: firebaseSVG
@@ -22,45 +37,37 @@ const skillData = [
     icon: gitSVG
   },
   {
-    title: "React.js",
-    icon: reactSVG
-  },
-  {
     title: "Github",
     icon: githubSVG
+  },
+  {
+    title: "HTML",
+    icon: htmlSVG
   },
   {
     title: "CSS3",
     icon: cssSVG
   },
   {
-    title: "Adobe",
+    title: "Google Cloud Services",
+    icon: cloudSVG
+  },
+  {
+    title: "Search Engine Optimisation",
+    icon: seoSVG
+  },
+  {
+    title: "Adobe Software",
     icon: photoshopSVG,
     // icon2: illustratorSVG,
   },
   {
-    title: "SEO",
-    icon: photoshopSVG
-  },
-  {
-    title: "Adobe Things",
-    icon: photoshopSVG
-  },
-  {
-    title: "Adobe Things",
-    icon: photoshopSVG
-  },
-  {
-    title: "Adobe Things",
-    icon: photoshopSVG
-  },
-  {
-    title: "Adobe Things",
-    icon: photoshopSVG
+    title: "C++",
+    icon: cSVG
   },
   {
     title: "WordPress",
-    icon: photoshopSVG
+    icon: wordpressSVG
   },
 ]
 
@@ -76,6 +83,9 @@ class Skills extends Component {
 
 
         </IconContainer>
+        <ReadMoreDiv>
+          <ReadMore>Read More</ReadMore>
+        </ReadMoreDiv>
       </SkillBox>
     )
 
@@ -110,12 +120,11 @@ const SkillBox = styled.div`
   ${'' /* margin: 0px 5px 5px 5px; */}
 
   p {
-    font-size: 2em;
-    transition: ease-out color 2s;
+    transition: ease-out color 3s;
   }
 
   img {
-    transition: ease-out filter 1s;
+    transition: ease-out filter 2s;
 
   }
 
@@ -217,6 +226,7 @@ const SkillBox = styled.div`
 
 
 const SkillText = styled.p`
+  font-size: 1vw;
   padding-left: 10px;
   font-family: 'Nunito',sans-serif;
   color: white;
@@ -234,4 +244,13 @@ const Icon = styled.img`
   ${'' /* &:hover{
     filter: grayscale(0%);
   } */}
+`
+const ReadMoreDiv = styled.div`
+
+`
+const ReadMore = styled.p`
+  font-size: 0.5vw;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 `

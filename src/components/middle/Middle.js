@@ -23,7 +23,7 @@ const MiddleHeading = styled.h2`
   height: 10%;
   margin: 0 auto;
   font-family: 'Nunito',sans-serif;
-  color: white;
+  color: rgb(163, 163, 163);
   font-weight: 300;
   font-size: 3em;
   ${'' /* font-family: 'Montserrat', sans-serif; */}
