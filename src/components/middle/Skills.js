@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import {Motion, spring} from 'react-motion';
-// import Skill from './Skill';
+
+import SkillReadMoreSection from './SkillReadMoreSection';
 import * as colourSwatch from '../../variables/colours';
 import firebaseSVG from '../../icons/firebase.svg'
 import reactSVG from '../../icons/react.svg'
@@ -17,12 +18,15 @@ import htmlSVG from '../../icons/html5.svg'
 import wordpressSVG from '../../icons/wordpress.svg'
 import cSVG from '../../icons/c.svg'
 import seoSVG from '../../icons/seo.svg'
-// import gitSVG from '../../icons/git.svg'
+
+import { CSSTransitionGroup } from 'react-transition-group';
+import '../../Animations.css';
 
 const skillData = [
   {
     title: "Javascript",
-    icon: javascriptSVG
+    icon: javascriptSVG,
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
     title: "React.js",
@@ -69,28 +73,64 @@ const skillData = [
     title: "WordPress",
     icon: wordpressSVG
   },
+  {
+    title: "Arduino & Electronics",
+    icon: wordpressSVG
+  },
 ]
 
 class Skills extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayOverlay: false,
+      selectedSkill: {
+        title: "JavaScript",
+        icon: javascriptSVG,
+        description: "this is all i know about JS..."
+      }
+    };
+  }
+
+  openReadMore = (skill) => {
+    this.setState({
+      displayOverlay: true,
+      selectedSkill: skill
+
+    })
+     console.log(skill);
+  }
+
+  closeReadMore = () => {
+    this.setState({
+      displayOverlay: false
+    })
+  }
+
   render() {
     const skills = skillData.map((skill, key) =>
-      <SkillBox>
+      <SkillBox onClick={() => this.openReadMore(skill)}>
         <SkillText>{skill.title}</SkillText>
         <IconContainer>
           <Icon src={skill.icon} />
-          {skill.icon2 && <Icon src={skill.icon2} />}
-
-
         </IconContainer>
-        <ReadMoreDiv>
-          <ReadMore>Read More</ReadMore>
-        </ReadMoreDiv>
+        <ReadMore>Read More</ReadMore>
       </SkillBox>
     )
 
     return (
       <SkillsContainer>
+        <CSSTransitionGroup
+          transitionName="slidein"
+          transitionAppear={false}
+          transitionEnterTimeout={500}
+          transitionEnter={true}
+          transitionLeaveTimeout={500}
+          transitionLeave={true}
+        >
+          {this.state.displayOverlay && <SkillReadMoreSection skillData={this.state.selectedSkill} onCloseOverlay={() => this.closeReadMore()} />}
+        </CSSTransitionGroup>
         {skills}
       </SkillsContainer>
     );
@@ -105,7 +145,8 @@ const slideIn = keyframes`
   100% { transform: translateX(0%); }
 `
 const SkillsContainer = styled.div`
-  height: 100%;
+  position: relative;
+  height: 90%;
 `
 
 const SkillBox = styled.div`
@@ -214,7 +255,7 @@ const SkillBox = styled.div`
       color: ${colourSwatch.colours[0]};
     }
   }
-  &:nth-child(12) {
+  &:nth-child(13) {
     background-color: rgb(106, 106, 106);
     animation-delay: 6s;
     &:hover p {
@@ -245,9 +286,7 @@ const Icon = styled.img`
     filter: grayscale(0%);
   } */}
 `
-const ReadMoreDiv = styled.div`
 
-`
 const ReadMore = styled.p`
   font-size: 0.5vw;
   position: absolute;

@@ -1,0 +1,16 @@
+.slidein-enter {
+  transform: translateX(100%);
+  /* width: 0; */
+}
+
+.slidein-enter.slidein-enter-active {
+  transform: translateX(0%);
+
+  /* width: 100%; */
+  transition: transform 0.5s ease-out;
+}
+
+.slidein-leave {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
