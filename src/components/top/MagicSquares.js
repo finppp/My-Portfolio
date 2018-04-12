@@ -72,4 +72,5 @@ export default MagicSquares;
 
 const Container = styled.section`
   height: 800px;
+  background-color: black;
 `

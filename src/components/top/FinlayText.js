@@ -38,7 +38,7 @@ const HeadingText = styled.h1`
   font-size: 13vw;
   font-weight: 800;
   line-height: 13vw;
-  color: rgb(75, 61, 119);
+  color: rgb(255, 255, 255);
   font-family: 'Nunito', sans-serif;
 `
 // font-family: 'Roboto', sans-serif;

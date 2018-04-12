@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <FullContainer className="App">
-        {/* <Top/> */}
+        <Top/>
         <MiddleContainer>
           <SkillsBlock/>
           <Bio/>
