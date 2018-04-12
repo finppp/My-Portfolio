@@ -4,22 +4,23 @@ import Skills from './Skills';
 
 // import "typeface-roboto";
 
-class Middle extends Component {
+class SkillsBlock extends Component {
 
   render() {
     return (
-      <MiddleContainer>
-        <MiddleHeading>Tech I Know</MiddleHeading>
+      <BlockContainer>
+        <BlockTitle>Tech I Know</BlockTitle>
         <Skills />
-      </MiddleContainer>
+      </BlockContainer>
     );
   }
 
 }
 
-export default Middle;
+export default SkillsBlock;
 
-const MiddleHeading = styled.h2`
+const BlockTitle = styled.h2`
+  background-color: black;
   height: 10%;
   margin: 0 auto;
   color: rgb(163, 163, 163);
@@ -29,7 +30,7 @@ const MiddleHeading = styled.h2`
 `
 // font-family: typeface-roboto;
 
-const MiddleContainer = styled.section `
+const BlockContainer = styled.section `
   background-color: rgb(255, 255, 255);
   width: 50%;
   height: 650px;
