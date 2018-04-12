@@ -14,6 +14,8 @@ import cSVG from '../icons/c.svg'
 import seoSVG from '../icons/seo.svg'
 import sassSVG from '../icons/sass.svg'
 import arduinoSVG from '../icons/arduino.svg'
+import audioSVG from '../icons/audio.svg'
+import cordovaSVG from '../icons/cordova.svg'
 
 const skillData = [
   {
@@ -59,7 +61,7 @@ const skillData = [
     icon: seoSVG
   },
   {
-    title: "Adobe Software",
+    title: "Adobe CC",
     icon: photoshopSVG,
     // icon2: illustratorSVG,
   },
@@ -68,12 +70,24 @@ const skillData = [
     icon: cSVG
   },
   {
+    title: "Cordova",
+    icon: cordovaSVG
+  },
+  {
     title: "WordPress",
     icon: wordpressSVG
   },
   {
     title: "Arduino & Electronics",
     icon: arduinoSVG
+  },
+  {
+    title: "Digital Audio & DSP",
+    icon: audioSVG
+  },
+  {
+    title: "Cubase?",
+    icon: audioSVG
   },
 ]
 

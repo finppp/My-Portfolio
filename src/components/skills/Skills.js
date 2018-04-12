@@ -6,20 +6,7 @@ import SkillReadMoreSection from './SkillReadMoreSection';
 import * as colourSwatch from '../../variables/colours';
 import SkillsTitle from './SkillsTitle';
 
-import firebaseSVG from '../../icons/firebase.svg'
-import reactSVG from '../../icons/react.svg'
-import gitSVG from '../../icons/git.svg'
-import cssSVG from '../../icons/css3.svg'
-import githubSVG from '../../icons/github.svg'
-import photoshopSVG from '../../icons/photoshop.svg'
-import illustratorSVG from '../../icons/illustrator.svg'
-import javascriptSVG from '../../icons/javascript.svg'
-import googleSVG from '../../icons/google.svg'
-import cloudSVG from '../../icons/cloud.svg'
-import htmlSVG from '../../icons/html5.svg'
-import wordpressSVG from '../../icons/wordpress.svg'
-import cSVG from '../../icons/c.svg'
-import seoSVG from '../../icons/seo.svg'
+
 
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../../Animations.css';
@@ -34,7 +21,7 @@ class Skills extends Component {
       displayOverlay: false,
       selectedSkill: {
         title: "JavaScript",
-        icon: javascriptSVG,
+        icon: 'javascriptSVG',
         description: "this is all i know about JS..."
       }
     };
@@ -133,74 +120,43 @@ const SkillBox = styled.div`
   &:nth-child(even) {
     background-color: rgb(136, 136, 136);
   }
-  &:nth-child(1) {
-    animation-delay: .5s;
+
+  &:nth-child(1 ) { animation-delay:  1.1s}
+  &:nth-child(2 ) { animation-delay:  1.2s}
+  &:nth-child(3 ) { animation-delay:  1.3s}
+  &:nth-child(4 ) { animation-delay:  1.4s}
+  &:nth-child(5 ) { animation-delay:  1.5s}
+  &:nth-child(6 ) { animation-delay:  1.6s}
+  &:nth-child(7 ) { animation-delay:  1.7s}
+  &:nth-child(8 ) { animation-delay:  1.8s}
+  &:nth-child(9 ) { animation-delay:  1.9s}
+  &:nth-child(10) { animation-delay: 2.0s}
+  &:nth-child(11) { animation-delay: 2.1s}
+  &:nth-child(12) { animation-delay: 2.2s}
+  &:nth-child(13) { animation-delay: 2.3s}
+  &:nth-child(14) { animation-delay: 2.4s}
+  &:nth-child(15) { animation-delay: 2.5s}
+  &:nth-child(16) { animation-delay: 2.6s}
+  &:nth-child(17) { animation-delay: 2.7s}
+  &:nth-child(18) { animation-delay: 2.8s}
+  &:nth-child(19) { animation-delay: 2.9s}
+
+  &:nth-child(4n-3) {
+    &:hover p {
+      color: ${colourSwatch.colours[0]};
+    }
+  }
+  &:nth-child(4n-2) {
     &:hover p {
       color: ${colourSwatch.colours[1]};
     }
   }
-  &:nth-child(2) {
-    animation-delay: 1s;
+  &:nth-child(4n-1) {
     &:hover p {
       color: ${colourSwatch.colours[2]};
     }
   }
-  &:nth-child(3) {
-    animation-delay: 1.5s;
-    &:hover p {
-      color: ${colourSwatch.colours[0]};
-    }
-  }
-  &:nth-child(4) {
-    animation-delay: 2s;
-    &:hover p {
-      color: ${colourSwatch.colours[3]};
-    }
-  }
-  &:nth-child(5) {
-    animation-delay: 2.5s;
-    &:hover p {
-      color: ${colourSwatch.colours[0]};
-    }
-  }
-  &:nth-child(6) {
-    animation-delay: 3s;
-    &:hover p {
-      color: ${colourSwatch.colours[3]};
-    }
-  }
-  &:nth-child(7) {
-    animation-delay: 3.5s;
-    &:hover p {
-      color: ${colourSwatch.colours[1]};
-    }
-  }
-  &:nth-child(8) {
-    animation-delay: 4s;
-    &:hover p {
-      color: ${colourSwatch.colours[2]};
-    }
-  }
-  &:nth-child(9) {
-    animation-delay: 4.5s;
-    &:hover p {
-      color: ${colourSwatch.colours[0]};
-    }
-  }
-  &:nth-child(10) {
-    animation-delay: 5s;
-    &:hover p {
-      color: ${colourSwatch.colours[3]};
-    }
-  }
-  &:nth-child(11) {
-    animation-delay: 5.5s;
-    &:hover p {
-      color: ${colourSwatch.colours[0]};
-    }
-  }
-  &:nth-child(13) {
-    animation-delay: 6s;
+  &:nth-child(4n) {
     &:hover p {
       color: ${colourSwatch.colours[3]};
     }
