@@ -4,25 +4,19 @@ import * as colourSwatch from '../../variables/colours';
 class SkillsTitle extends Component {
 
   render() {
+    let generatedSpans = [];
+    if (!this.props.text) {
+      console.log('there is not text prop');
+    }else {
+      for (var i = 0; i < this.props.text.length; i++) {
+        generatedSpans.push(<span>{this.props.text[i]}</span>)
+      }
+    }
+
     return (
       <Container>
         <p>
-          <span>T</span>
-          <span>h</span>
-          <span>i</span>
-          <span>n</span>
-          <span>g</span>
-          <span>s </span>
-          <span>I</span>
-          <span>'</span>
-          <span>m </span>
-          <span>g</span>
-          <span>o</span>
-          <span>o</span>
-          <span>d </span>
-          <span>a</span>
-          <span>t</span>
-          <span>.</span>
+          {generatedSpans}
         </p>
       </Container>
     );
@@ -37,8 +31,8 @@ const slideIn = keyframes`
 `
 
 const Container = styled.div`
-  cursor: pointer;
-  height: 40%;
+  cursor: default;
+  height: calc(100% / 3);
   animation: ${slideIn} 1s forwards;
   transform: translateX(1000%);
   background-color: rgb(0, 0, 0);

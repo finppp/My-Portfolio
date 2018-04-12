@@ -23,63 +23,8 @@ import seoSVG from '../../icons/seo.svg'
 
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../../Animations.css';
+import skillData from '../../variables/skillData'
 
-const skillData = [
-  {
-    title: "Javascript",
-    icon: javascriptSVG,
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-  },
-  {
-    title: "React.js",
-    icon: reactSVG
-  },
-  {
-    title: "Firebase",
-    icon: firebaseSVG
-  },
-  {
-    title: "Git",
-    icon: gitSVG
-  },
-  {
-    title: "Github",
-    icon: githubSVG
-  },
-  {
-    title: "HTML",
-    icon: htmlSVG
-  },
-  {
-    title: "CSS3",
-    icon: cssSVG
-  },
-  {
-    title: "Google Cloud Services",
-    icon: cloudSVG
-  },
-  {
-    title: "Search Engine Optimisation",
-    icon: seoSVG
-  },
-  {
-    title: "Adobe Software",
-    icon: photoshopSVG,
-    // icon2: illustratorSVG,
-  },
-  {
-    title: "C++",
-    icon: cSVG
-  },
-  {
-    title: "WordPress",
-    icon: wordpressSVG
-  },
-  {
-    title: "Arduino & Electronics",
-    icon: wordpressSVG
-  },
-]
 
 class Skills extends Component {
 
@@ -133,8 +78,9 @@ class Skills extends Component {
         >
           {this.state.displayOverlay && <SkillReadMoreSection skillData={this.state.selectedSkill} onCloseOverlay={() => this.closeReadMore()} />}
         </CSSTransitionGroup>
-        <SkillsTitle/>
+        <SkillsTitle text="Things I'm good at."/>
         {skills}
+        <SkillsTitle text="Bits I'm working on."/>
       </SkillsContainer>
     );
   }
@@ -153,13 +99,13 @@ const SkillsContainer = styled.div`
 `
 
 const SkillBox = styled.div`
-  height: 40%;
+  display: block;
+  float: left;
+  height: calc(100% / 3);
+  width: calc(100% / 7);
   animation: ${slideIn} 1s forwards;
   transform: translateX(1000%);
 
-  float: left;
-  display: block;
-  width: calc(100% / 7);
   text-align: left;
   ${'' /* margin: 0px 5px 5px 5px; */}
 
