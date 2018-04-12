@@ -4,6 +4,8 @@ import {Motion, spring} from 'react-motion';
 
 import SkillReadMoreSection from './SkillReadMoreSection';
 import * as colourSwatch from '../../variables/colours';
+import SkillsTitle from './SkillsTitle';
+
 import firebaseSVG from '../../icons/firebase.svg'
 import reactSVG from '../../icons/react.svg'
 import gitSVG from '../../icons/git.svg'
@@ -131,6 +133,7 @@ class Skills extends Component {
         >
           {this.state.displayOverlay && <SkillReadMoreSection skillData={this.state.selectedSkill} onCloseOverlay={() => this.closeReadMore()} />}
         </CSSTransitionGroup>
+        <SkillsTitle/>
         {skills}
       </SkillsContainer>
     );
@@ -156,7 +159,7 @@ const SkillBox = styled.div`
 
   float: left;
   display: block;
-  width: 15%;
+  width: calc(100% / 7);
   text-align: left;
   ${'' /* margin: 0px 5px 5px 5px; */}
 
@@ -178,85 +181,79 @@ const SkillBox = styled.div`
     filter: grayscale(0%);
   }
 
-  &:nth-child(1) {
+  &:nth-child(odd) {
     background-color: rgb(106, 106, 106);
+  }
+  &:nth-child(even) {
+    background-color: rgb(136, 136, 136);
+  }
+  &:nth-child(1) {
     animation-delay: .5s;
     &:hover p {
       color: ${colourSwatch.colours[1]};
     }
   }
   &:nth-child(2) {
-    background-color: rgb(136, 136, 136);
     animation-delay: 1s;
     &:hover p {
       color: ${colourSwatch.colours[2]};
     }
   }
   &:nth-child(3) {
-    background-color: rgb(106, 106, 106);
     animation-delay: 1.5s;
     &:hover p {
       color: ${colourSwatch.colours[0]};
     }
   }
   &:nth-child(4) {
-    background-color: rgb(136, 136, 136);
     animation-delay: 2s;
     &:hover p {
       color: ${colourSwatch.colours[3]};
     }
   }
   &:nth-child(5) {
-    background-color: rgb(106, 106, 106);
     animation-delay: 2.5s;
     &:hover p {
       color: ${colourSwatch.colours[0]};
     }
   }
   &:nth-child(6) {
-    background-color: rgb(136, 136, 136);
     animation-delay: 3s;
     &:hover p {
       color: ${colourSwatch.colours[3]};
     }
   }
   &:nth-child(7) {
-    background-color: rgb(136, 136, 136);
     animation-delay: 3.5s;
     &:hover p {
       color: ${colourSwatch.colours[1]};
     }
   }
   &:nth-child(8) {
-    background-color: rgb(106, 106, 106);
     animation-delay: 4s;
     &:hover p {
       color: ${colourSwatch.colours[2]};
     }
   }
   &:nth-child(9) {
-    background-color: rgb(136, 136, 136);
     animation-delay: 4.5s;
     &:hover p {
       color: ${colourSwatch.colours[0]};
     }
   }
   &:nth-child(10) {
-    background-color: rgb(106, 106, 106);
     animation-delay: 5s;
     &:hover p {
       color: ${colourSwatch.colours[3]};
     }
   }
   &:nth-child(11) {
-    background-color: rgb(136, 136, 136);
     animation-delay: 5.5s;
     &:hover p {
       color: ${colourSwatch.colours[0]};
     }
   }
   &:nth-child(13) {
-    background-color: rgb(106, 106, 106);
     animation-delay: 6s;
     &:hover p {
       color: ${colourSwatch.colours[3]};

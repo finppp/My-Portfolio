@@ -9,7 +9,6 @@ class SkillsBlock extends Component {
   render() {
     return (
       <BlockContainer>
-        <BlockTitle>Tech I Know</BlockTitle>
         <Skills />
       </BlockContainer>
     );
