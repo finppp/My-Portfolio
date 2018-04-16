@@ -82,7 +82,7 @@ const slideIn = keyframes`
 `
 const SkillsContainer = styled.div`
   position: relative;
-  height: 90%;
+  height: 100%;
 `
 
 const SkillBox = styled.div`

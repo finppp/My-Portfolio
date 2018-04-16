@@ -32,7 +32,7 @@ const BlockTitle = styled.h2`
 const BlockContainer = styled.section `
   background-color: rgb(255, 255, 255);
   width: 50%;
-  height: 650px;
+  height: 60%;
   overflow: hidden;
   ${'' /* position: relative; */}
   float: right;
