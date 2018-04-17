@@ -4,15 +4,17 @@ import './App.css';
 import Top from './components/top/Top';
 import SkillsBlock from './components/skills/SkillsBlock';
 import Bio from './components/bio/Bio';
+import Melody from './components/melody/Melody';
 
 class App extends Component {
   render() {
     return (
       <FullContainer className="App">
-        <Top/>
+        {/* <Top/> */}
         <MiddleContainer>
-          <SkillsBlock/>
           <Bio/>
+          <SkillsBlock/>
+          <Melody/>
         </MiddleContainer>
       </FullContainer>
     );
@@ -28,6 +30,9 @@ const FullContainer = styled.section`
 `
 
 const MiddleContainer = styled.section`
+  font-size: 0;
+  display: block;
+  overflow: auto;
   width: 100vw;
   height: 100vh;
   margin: 0;

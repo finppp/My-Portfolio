@@ -166,7 +166,7 @@ const SkillBox = styled.div`
 
 
 const SkillText = styled.p`
-  font-size: 1vw;
+  font-size: 1.1em;
   padding-left: 10px;
   font-family: 'Nunito',sans-serif;
   color: white;
@@ -187,7 +187,7 @@ const Icon = styled.img`
 `
 
 const ReadMore = styled.p`
-  font-size: 0.5vw;
+  font-size: 0.9em;
   position: absolute;
   right: 5px;
   bottom: 5px;
