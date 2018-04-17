@@ -34,6 +34,8 @@ class Slider extends Component {
     }
   }
 
+
+
   handleDrag = (e, ui) => {
     let newYpos = this.state.yPos;
     const containerHeight = this.state.containerHeight
@@ -91,7 +93,7 @@ const SliderContainer = styled.div`
 `
 
 const DraggableObject = styled.div`
-  transition: top 0.1s cubic-bezier(0.01, 0.69, 0.58, 1);
+  ${'' /* transition: top 0.1s cubic-bezier(0.01, 0.69, 0.58, 1); */}
   position: relative;
   top: ${props => props.yPostition + 'px'} ;
   background-color: green;

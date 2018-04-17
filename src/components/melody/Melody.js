@@ -2,13 +2,20 @@ import React, { Component } from 'react';
 import { DraggableCore } from 'react-draggable';
 import styled from 'styled-components';
 import Sliders from './Sliders';
+import MelodyControls from './MelodyControls';
 
 class Melody extends Component {
 
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      melody: [1,2,1,2,1,2,1,2]
+    };
+  }
 
 
   componentDidMount() {
+    this.soundSetup();
     const height = this.melodyContainer.clientHeight;
     this.setState({
       containerHeight: height,
@@ -16,10 +23,52 @@ class Melody extends Component {
     })
   }
 
+  audioCtx = new AudioContext();
+  synth = this.audioCtx.createOscillator();
+  mainVolume = this.audioCtx.createGain();
+  ampEnvelope = this.audioCtx.createGain();
+
+  soundSetup = () => {
+    // let synth = this.audioCtx.createOscillator();
+    // let volume = this.audioCtx.createGain();
+    this.synth.type = 'saw';
+    this.synth.frequency.setValueAtTime(440, this.audioCtx.currentTime);
+    this.synth.connect(this.ampEnvelope);
+
+    //set the amp env to 0
+    this.ampEnvelope.gain.setValueAtTime(0, this.audioCtx.currentTime);
+    this.ampEnvelope.connect(this.mainVolume);
+    this.synth.start();
+
+    this.mainVolume.connect(this.audioCtx.destination);
+    this.mainVolume.gain.setValueAtTime(0.1, this.audioCtx.currentTime);
+  }
+
+
+  playMelody = () => {
+    this.ampEnvelope.gain.setValueAtTime(1, this.audioCtx.currentTime);
+    this.ampEnvelope.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 2);
+  }
+
+  melodyChangeHandler = (sliderData) => {
+    console.log(sliderData);
+    let newSliderValues = this.state.melody;
+    newSliderValues[sliderData.sliderId] = sliderData.sliderValue;
+    this.setState({
+      melody: newSliderValues
+    })
+     console.log(sliderData);
+  }
+
   render() {
     return (
       <Container innerRef={(melodyContainer) => this.melodyContainer = melodyContainer}>
-        <Sliders/>
+        <MelodyControls
+          onVolumeChange={(newVolume) => this.changeVolume(newVolume)}
+          onPlay={() => this.playMelody()}/>
+        <Sliders
+          onMelodyChange={(args) => this.melodyChangeHandler(args)}
+          melody={this.state.melody}/>
       </Container>
     );
   }
