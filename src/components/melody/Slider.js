@@ -6,44 +6,57 @@ class Slider extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      yPos: 0,
-      sliderValue: 10
-    };
+    this.state = {};
   }
 
   componentDidMount() {
-    const height = this.melodyContainer.clientHeight;
+    const containerHeight = this.melodyContainer.clientHeight;
+    const blockSize = containerHeight/10;
+    let newYpos = (10 - this.props.sliderValue) * blockSize;
     this.setState({
-      containerHeight: height,
-      blockSize: height/10
+      containerHeight,
+      blockSize,
+      sliderValue: this.props.sliderValue,
+      yPos: newYpos
     })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    if (this.state.yPos != null) {
+      // if (this.state.sliderValue != nextProps.sliderValue) {
+        let newYpos = (10 - nextProps.sliderValue) * this.state.blockSize;
+        console.log(newYpos);
+        this.setState({
+          yPos: newYpos
+        })
+      // }
+    }
   }
 
   handleDrag = (e, ui) => {
     let newYpos = this.state.yPos;
     const containerHeight = this.state.containerHeight
     const blockSize = this.state.blockSize
-
     newYpos += ui.deltaY
+    console.log(newYpos);
     if (newYpos < 0) {
       newYpos = 0;
     }
     if (newYpos > (containerHeight - blockSize)) {
       newYpos = containerHeight - blockSize;
     }
-
     let sliderValue = 10 - (newYpos/blockSize);
-
+    console.log(sliderValue);
     this.props.onValueChange({
       sliderValue,
       sliderId: this.props.sliderId
     })
 
-    this.setState({
-      yPos: newYpos,
-      sliderValue
-    })
+    // this.setState({
+    //   // yPos: newYpos,
+    //   sliderValue
+    // })
   }
 
   render() {
