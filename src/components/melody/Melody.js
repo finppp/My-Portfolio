@@ -29,8 +29,7 @@ class Melody extends Component {
   ampEnvelope = this.audioCtx.createGain();
 
   soundSetup = () => {
-    // let synth = this.audioCtx.createOscillator();
-    // let volume = this.audioCtx.createGain();
+    //Synth setup
     this.synth.type = 'saw';
     this.synth.frequency.setValueAtTime(440, this.audioCtx.currentTime);
     this.synth.connect(this.ampEnvelope);
@@ -46,8 +45,24 @@ class Melody extends Component {
 
 
   playMelody = () => {
+    //// TODO: about to set some values, to easier add time values
+    this.synth.frequency.setValueAtTime(musicScale[this.state.melody[0]], this.audioCtx.currentTime)
     this.ampEnvelope.gain.setValueAtTime(1, this.audioCtx.currentTime);
-    this.ampEnvelope.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 2);
+    this.ampEnvelope.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 0.4);
+
+    this.synth.frequency.setValueAtTime(musicScale[this.state.melody[1]], this.audioCtx.currentTime + 1)
+    this.ampEnvelope.gain.setValueAtTime(1, this.audioCtx.currentTime + 1);
+    this.ampEnvelope.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 1.4);
+
+    this.synth.frequency.setValueAtTime(musicScale[this.state.melody[2]], this.audioCtx.currentTime + 2)
+    this.ampEnvelope.gain.setValueAtTime(1, this.audioCtx.currentTime + 2);
+    this.ampEnvelope.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 2.4);
+
+    this.synth.frequency.setValueAtTime(musicScale[this.state.melody[3]], this.audioCtx.currentTime + 3)
+    this.ampEnvelope.gain.setValueAtTime(1, this.audioCtx.currentTime + 3);
+    this.ampEnvelope.gain.linearRampToValueAtTime(0, this.audioCtx.currentTime + 3.4);
+
+    // this.synth.frequency.setValueAtTime(this.state.melody[4], )
   }
 
   melodyChangeHandler = (sliderData) => {
@@ -74,6 +89,8 @@ class Melody extends Component {
   }
 
 }
+
+const musicScale = [523.25, 587.33, 659.25, 783.99, 880.00, 1046.50, 1174.66, 1318.51, 1567.98, 1760.00]
 
 export default Melody;
 
