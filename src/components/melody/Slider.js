@@ -64,6 +64,7 @@ class Slider extends Component {
   render() {
     return (
       <SliderContainer innerRef={(melodyContainer) => this.melodyContainer = melodyContainer}>
+        <ThinLine></ThinLine>
         <DraggableCore
           axis="y"
           handle=".handle"
@@ -75,7 +76,6 @@ class Slider extends Component {
           onStop={this.handleStop}
           bounds="parent">
           <DraggableObject className="handle" yPostition={this.state.yPos}>
-            <div>{this.state.sliderValue}</div>
           </DraggableObject>
         </DraggableCore>
       </SliderContainer>
@@ -87,16 +87,43 @@ class Slider extends Component {
 export default Slider;
 
 const SliderContainer = styled.div`
+  position: relative;
   float: left;
   height: 100%;
   width: 12.5%;
 `
+// const Circle = styled.div`
+//   background-color: pink;
+//   margin-left: auto;
+//   margin-right: auto;
+//   left: 0;
+//   right: 0;
+//   height: 2vw;
+//   width: 2vw;
+//   border-radius: 50%;
+// `
 
 const DraggableObject = styled.div`
-  ${'' /* transition: top 0.1s cubic-bezier(0.01, 0.69, 0.58, 1); */}
+  ${'' /* border-radius: 10px 0px 0px 10px; */}
+  margin-left: 5%;
   position: relative;
   top: ${props => props.yPostition + 'px'} ;
-  background-color: green;
-  width: 100%;
+  width: 95%;
   height: 10%;
+  ${'' /* border-radius: 10%; */}
+  background-color: rgb(99, 99, 99);
+  &:hover{
+    background-color: rgb(112, 212, 255)
+  }
+  &:active{
+    background-color: rgb(112, 212, 255)
+ }
+`
+
+const ThinLine = styled.div`
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
 `

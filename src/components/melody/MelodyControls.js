@@ -23,13 +23,19 @@ const Container = styled.div`
   float: left;
   width: 20%;
   height: 100%;
-  background-color: green;
+  ${'' /* background-color: #323748; */}
 `
 
-const Button = styled.button`
+const Button = styled.div`
   border: none;
   outline: none;
-  width: 100%;
+  width: 90%;
   height: 25%;
-  background-color: orange;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+  &:hover{
+    text-decoration: underline;
+    color: rgb(255, 248, 77);
+  }
 `
