@@ -6,13 +6,15 @@ class PortfolioSlider extends Component {
   render() {
     return (
       <Container>
-        <Slide/>
-        <Slide/>
-        <Slide/>
-        <Slide/>
-        <Slide/>
-        <Slide/>
-        <Slide/>
+        <Picker>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+          <Slide/>
+        </Picker>
         <ViewSlide/>
       </Container>
     );
@@ -28,6 +30,16 @@ const Container = styled.div`
   background-color: green;
 `
 
+const Picker = styled.div`
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: green;
+`
+
+
+
+
 
 class Slide extends Component {
   render() {
@@ -40,8 +52,8 @@ class Slide extends Component {
 }
 
 const SlideContainer = styled.div`
-  width: calc(25%/7);
-  height: 100%;
+  width: 100%;
+  height: calc(100%/8);
   display: inline-block;
 `
 
@@ -49,14 +61,13 @@ class ViewSlide extends Component {
   render() {
     return (
       <ViewSlideContainer>
-        VIEWSLIDE
       </ViewSlideContainer>
     )
   }
 }
 
 const ViewSlideContainer = styled.div`
-  width: 75%;
+  width: 70%;
   height: 100%;
   display: inline-block;
   background-color: red;
