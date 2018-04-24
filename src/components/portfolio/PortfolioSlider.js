@@ -29,7 +29,12 @@ class PortfolioSlider extends Component {
           <Pick active={this.state.currentPorfolioItem == 6} onClick={() => this.changePortfolioItem(6)} title="Folded Group"/>
           <Pick active={this.state.currentPorfolioItem == 7} onClick={() => this.changePortfolioItem(7)} title="tshirt.co.uk"/>
         </PickerSection>
-        <ViewSlide/>
+        <PortfolioDetails
+          itemDetails={{
+            title: "This is a title",
+            title: "This is a title"
+          }}
+          />
       </Container>
     );
   }
@@ -116,10 +121,31 @@ const ArrowContainer = styled.div`
 
 
 
-class ViewSlide extends Component {
+class PortfolioDetails extends Component {
   render() {
     return (
       <ViewSlideContainer>
+        <Title>
+          <h2>{this.props.itemDetails.title}</h2>
+        </Title>
+        <BottomContainer>
+          <LeftColumn>
+            <TextDetails>
+              <p>{this.props.itemDetails.details}</p>
+            </TextDetails>
+            <Outlink>
+              <a href={this.props.itemDetails.outlink}>Visit Site -></a>
+            </Outlink>
+          </LeftColumn>
+          <RightColumn>
+            <Screenshot>
+
+            </Screenshot>
+            <ToolsUsed>
+
+            </ToolsUsed>
+          </RightColumn>
+        </BottomContainer>
       </ViewSlideContainer>
     )
   }
@@ -131,3 +157,54 @@ const ViewSlideContainer = styled.div`
   display: inline-block;
   background-color: red;
 `
+
+const Title = styled.div`
+  height: 10%;
+  width: 100%;
+  h2{
+    font-size: 2em;
+    margin: 0;
+  }
+`
+
+const BottomContainer = styled.div`
+  height: 90%;
+  width: 100%;
+`
+
+const LeftColumn = styled.div`
+  float: left;
+  height: 100%;
+  width: 50%;
+`
+
+  const TextDetails = styled.div`
+    height: 80%;
+    width: 100%;
+    p {
+
+    }
+  `
+  const Outlink = styled.div`
+    height: 20%;
+    width: 100%;
+    a {
+
+    }
+  `
+
+const RightColumn = styled.div`
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+`
+
+
+  const Screenshot = styled.div`
+    height: 30%;
+    width: 100%;
+  `
+  const ToolsUsed = styled.div`
+    height: 70%;
+    width: 100%;
+  `
