@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import MeImg from '../../images/me-cropped-bw.jpg'
+import Outlinks from './Outlinks';
 
 class Bio extends Component {
 
@@ -13,10 +14,9 @@ class Bio extends Component {
           </TitleContainer>
         </TopHalf>
         <BottomHalf>
+          <Outlinks/>
           <ImageContainer>
-            {/* <img src={meImg}/> */}
           </ImageContainer>
-
         </BottomHalf>
       </BlockContainer>
     );
@@ -26,9 +26,12 @@ class Bio extends Component {
 
 export default Bio;
 
+
 const BlockContainer = styled.section`
-width: 50%;
-height: 100%;
+  font-size: 16px;
+  float: left;
+  width: 50%;
+  height: 100%;
 `
 
 const TopHalf = styled.section`
