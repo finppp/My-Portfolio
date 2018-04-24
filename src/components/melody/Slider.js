@@ -6,7 +6,9 @@ class Slider extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      noteActive: false
+    };
   }
 
   componentDidMount() {
@@ -22,15 +24,25 @@ class Slider extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
+    console.log(nextProps.currentStep, nextProps.sliderId);
+    if(nextProps.currentStep == nextProps.sliderId) {
+      this.setState({
+        noteActive: true
+      })
+    } else{
+      this.setState({
+        noteActive: false
+      })
+    }
+
     if (this.state.yPos != null) {
-      // if (this.state.sliderValue != nextProps.sliderValue) {
+      if (this.state.sliderValue != nextProps.sliderValue) {
         let newYpos = (10 - nextProps.sliderValue) * this.state.blockSize;
-        console.log(newYpos);
         this.setState({
+          sliderValue: nextProps.sliderValue,
           yPos: newYpos
         })
-      // }
+      }
     }
   }
 
@@ -41,7 +53,6 @@ class Slider extends Component {
     const containerHeight = this.state.containerHeight
     const blockSize = this.state.blockSize
     newYpos += ui.deltaY
-    console.log(newYpos);
     if (newYpos < 0) {
       newYpos = 0;
     }
@@ -49,16 +60,11 @@ class Slider extends Component {
       newYpos = containerHeight - blockSize;
     }
     let sliderValue = 10 - (newYpos/blockSize);
-    console.log(sliderValue);
+    sliderValue = Math.round(sliderValue)
     this.props.onValueChange({
       sliderValue,
       sliderId: this.props.sliderId
     })
-
-    // this.setState({
-    //   // yPos: newYpos,
-    //   sliderValue
-    // })
   }
 
   render() {
@@ -75,7 +81,7 @@ class Slider extends Component {
           onDrag={this.handleDrag}
           onStop={this.handleStop}
           bounds="parent">
-          <DraggableObject className="handle" yPostition={this.state.yPos}>
+          <DraggableObject className="handle" yPostition={this.state.yPos} style={this.state.noteActive && activeStyle}>
           </DraggableObject>
         </DraggableCore>
       </SliderContainer>
@@ -85,6 +91,11 @@ class Slider extends Component {
 }
 
 export default Slider;
+
+const activeStyle = {
+  'background-color': 'orange',
+  transition: 'none'
+}
 
 const SliderContainer = styled.div`
   position: relative;
@@ -104,6 +115,7 @@ const SliderContainer = styled.div`
 // `
 
 const DraggableObject = styled.div`
+  transition: background-color 0.2s ease-out;
   ${'' /* border-radius: 10px 0px 0px 10px; */}
   margin-left: 5%;
   position: relative;
