@@ -1,10 +1,70 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+
 import cakevalley from '../../images/cakevalley/cakevalley-home.png';
-import boathouse from '../../images/cakevalley/cakevalley-home.png';
-import cakevalley from '../../images/cakevalley/cakevalley-home.png';
-import cakevalley from '../../images/cakevalley/cakevalley-home.png';
-import cakevalley from '../../images/cakevalley/cakevalley-home.png';
+import boathouse from '../../images/boathouse/boathouse-home.png';
+import folded from '../../images/folded/folded-home.png';
+import paddywack from '../../images/paddywack/paddywack-home.png';
+import rowsquad from '../../images/rowsquad/rowsquad-home.png';
+import telscombe from '../../images/telscombe/telscombe-home.png';
+import tshirt from '../../images/tshirt/tshirt-home.png';
+
+const portfolioDetails = [
+  {
+    title: "The Cake Valley",
+    screenshots: [cakevalley],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "http://www.tshirt.co.uk/"
+
+  },
+  {
+    title: "MyBoathouse",
+    screenshots: [boathouse],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "http://www.tshirt.co.uk/"
+
+  },
+  {
+    title: "Folded Group",
+    screenshots: [folded],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "http://www.tshirt.co.uk/"
+
+  },
+  {
+    title: "Paddywack Prints",
+    screenshots: [paddywack],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "http://www.tshirt.co.uk/"
+
+  },
+  {
+    title: "RowSquad",
+    screenshots: [rowsquad],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "http://www.tshirt.co.uk/"
+
+  },
+  {
+    title: "Telscombe Village",
+    screenshots: [telscombe],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "https://telscombevillageclub.co.uk/"
+  },
+  {
+    title: "Tshirt.co.uk",
+    screenshots: [tshirt],
+    bio: "The long bit of text goes here",
+    tools: [],
+    url: "http://www.tshirt.co.uk/"
+  }
+]
 
 class PortfolioSlider extends Component {
 
@@ -26,19 +86,16 @@ class PortfolioSlider extends Component {
     return (
       <Container>
         <PickerSection>
-          <Pick active={this.state.currentPorfolioItem == 1} onClick={() => this.changePortfolioItem(1)} title="RowSquad"/>
-          <Pick active={this.state.currentPorfolioItem == 2} onClick={() => this.changePortfolioItem(2)} title="MyBoathouse"/>
-          <Pick active={this.state.currentPorfolioItem == 3} onClick={() => this.changePortfolioItem(3)} title="Paddywack Prints"/>
-          <Pick active={this.state.currentPorfolioItem == 4} onClick={() => this.changePortfolioItem(4)} title="The Cake Valley"/>
-          <Pick active={this.state.currentPorfolioItem == 5} onClick={() => this.changePortfolioItem(5)} title="Telscombe Village"/>
-          <Pick active={this.state.currentPorfolioItem == 6} onClick={() => this.changePortfolioItem(6)} title="Folded Group"/>
-          <Pick active={this.state.currentPorfolioItem == 7} onClick={() => this.changePortfolioItem(7)} title="tshirt.co.uk"/>
+          <Pick active={this.state.currentPorfolioItem == 0} onClick={() => this.changePortfolioItem(0)} title={portfolioDetails[0].title}/>
+          <Pick active={this.state.currentPorfolioItem == 1} onClick={() => this.changePortfolioItem(1)} title={portfolioDetails[1].title}/>
+          <Pick active={this.state.currentPorfolioItem == 2} onClick={() => this.changePortfolioItem(2)} title={portfolioDetails[2].title}/>
+          <Pick active={this.state.currentPorfolioItem == 3} onClick={() => this.changePortfolioItem(3)} title={portfolioDetails[3].title}/>
+          <Pick active={this.state.currentPorfolioItem == 4} onClick={() => this.changePortfolioItem(4)} title={portfolioDetails[4].title}/>
+          <Pick active={this.state.currentPorfolioItem == 5} onClick={() => this.changePortfolioItem(5)} title={portfolioDetails[5].title}/>
+          <Pick active={this.state.currentPorfolioItem == 6} onClick={() => this.changePortfolioItem(6)} title={portfolioDetails[6].title}/>
         </PickerSection>
         <PortfolioDetails
-          itemDetails={{
-            title: "This is a title",
-            title: "This is a title"
-          }}
+          itemDetails={portfolioDetails[this.state.currentPorfolioItem]}
           />
       </Container>
     );
@@ -145,7 +202,7 @@ class PortfolioDetails extends Component {
           <RightColumn>
             <Screenshot>
               <WebsiteImageContainer>
-                <img src={screenshot}/>
+                <img src={this.props.itemDetails.screenshots[0]}/>
                 <Stand></Stand>
                 <StandBase></StandBase>
               </WebsiteImageContainer>
