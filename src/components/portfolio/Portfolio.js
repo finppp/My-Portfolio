@@ -6,7 +6,7 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <Container>
+      <Container name="portfolio">
         <PortfolioSlider />
       </Container>
     );

@@ -9,7 +9,7 @@ class Top extends Component {
 
   render() {
     return (
-      <TopContainer>
+      <TopContainer name="top">
         <MagicSquares />
         <FinlayText/>
       </TopContainer>

@@ -161,7 +161,7 @@ class Melody extends Component {
 
   render() {
     return (
-      <Container innerRef={(melodyContainer) => this.melodyContainer = melodyContainer}>
+      <Container name="melody" innerRef={(melodyContainer) => this.melodyContainer = melodyContainer}>
         <CSSTransitionGroup
             transitionName="slidein"
             transitionAppear={false}

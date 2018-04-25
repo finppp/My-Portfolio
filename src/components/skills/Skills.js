@@ -54,7 +54,7 @@ class Skills extends Component {
     )
 
     return (
-      <SkillsContainer>
+      <SkillsContainer name="skills">
         <CSSTransitionGroup
           transitionName="slidein"
           transitionAppear={false}

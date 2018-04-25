@@ -3,30 +3,55 @@ import styled, { keyframes } from 'styled-components';
 import Confetti from 'react-dom-confetti';
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../../Animations.css';
+// import * as Scroll from 'react-scroll';
+// import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const config = {
-  angle: 32,
+  angle: 5,
   spread: 59,
   startVelocity: 45,
   elementCount: 50,
   decay: 0.9
 };
-
+// const config = {
+//   angle: 0,
+//   spread: 112,
+//   startVelocity: 40,
+//   elementCount: 45,
+//   decay: 0.9
+// };
 class Menu extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       confetti: false,
-      displayMenu: true
+      displayMenu: false
     };
   }
 
   toggleMenu = () => {
     let newState = !this.state.displayMenu;
+
     this.setState({
-      displayMenu: newState
+      displayMenu: newState,
+      confetti: !newState
     })
+  }
+
+  scrollTo = (element) => {
+    this.setState({
+      displayMenu: false,
+      confetti: true
+    })
+    scroller.scrollTo(element, {
+      duration: 500,
+      smooth: true,
+      containerId: 'ContainerElementID',
+      // offset: 50 // Scrolls to element + 50 pixels down the page
+    })
+
   }
 
   render() {
@@ -34,7 +59,7 @@ class Menu extends Component {
       <Container>
         <Confetti active={ this.state.confetti } config={ config }/>
         <Toggle onClick={() => this.toggleMenu()}>
-          <i class="fas fa-bars"></i>
+          <i className="fas fa-bars"></i>
           <p>
             <span>M</span>
             <span>e</span>
@@ -54,14 +79,26 @@ class Menu extends Component {
             >
             {this.state.displayMenu &&
               <div>
-                <MenuItem>
+                <MenuItem onClick={() => this.scrollTo('top')}>
                   <p>Home</p>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={() => this.scrollTo('bio')}>
                   <p>About me</p>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={() => this.scrollTo('skills')}>
                   <p>Skills</p>
+                </MenuItem>
+                <MenuItem onClick={() => this.scrollTo('outlinks')}>
+                  <p>Externals</p>
+                </MenuItem>
+                <MenuItem onClick={() => this.scrollTo('melody')}>
+                  <p>Melody</p>
+                </MenuItem>
+                <MenuItem onClick={() => this.scrollTo('portfolio')}>
+                  <p>Portfolio</p>
+                </MenuItem>
+                <MenuItem onClick={() => this.scrollTo('contact')}>
+                  <p>Contact</p>
                 </MenuItem>
               </div>
             }

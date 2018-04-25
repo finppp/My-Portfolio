@@ -7,7 +7,7 @@ class Bio extends Component {
 
   render() {
     return (
-      <BlockContainer>
+      <BlockContainer name="bio">
         <TopHalf>
           <TitleContainer>
             <p>About Me.</p>
@@ -37,7 +37,7 @@ const BlockContainer = styled.section`
 const TopHalf = styled.section`
   background-color: #4981c9;
   background-color: #90d4de;
-  
+
   height: 50%;
   width: 100%
 `

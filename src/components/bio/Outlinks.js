@@ -4,7 +4,7 @@ import styled from 'styled-components';
 class Outlinks extends Component {
   render() {
     return (
-      <OutlinksContainer>
+      <OutlinksContainer name="outlinks">
         <h2>See me around the web.</h2>
         <OutlinkQuadrant key={1}>Github.</OutlinkQuadrant>
         <OutlinkQuadrant key={2}>Stackoverflow.</OutlinkQuadrant>
