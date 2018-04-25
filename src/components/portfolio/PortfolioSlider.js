@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import screenshot from '../../images/RowSquad/rowsquad-dashboard.PNG';
 
 class PortfolioSlider extends Component {
 
@@ -139,7 +140,11 @@ class PortfolioDetails extends Component {
           </LeftColumn>
           <RightColumn>
             <Screenshot>
-
+              <WebsiteImageContainer>
+                <img src={screenshot}/>
+                <Stand></Stand>
+                <StandBase></StandBase>
+              </WebsiteImageContainer>
             </Screenshot>
             <ToolsUsed>
 
@@ -201,10 +206,79 @@ const RightColumn = styled.div`
 
 
   const Screenshot = styled.div`
-    height: 30%;
-    width: 100%;
-  `
-  const ToolsUsed = styled.div`
+    position: relative;
     height: 70%;
+    width: 100%;
+    img{
+      position: relative;
+      z-index: 3;
+      width: 100%;
+    }
+  `
+  const WebsiteImageContainer = styled.div`
+    font-size: 0;
+    border-style: solid;
+    border-width: 7px;
+    border-color: black;
+    border-radius: 1%;
+    position: absolute;
+    ${'' /* height: 67%; */}
+    ${'' /* width: 56%; */}
+    top: 3%;
+    left: 22%;
+    background-color: green;
+    z-index: 2;
+    margin-right: 10%;
+  `
+
+  const Stand = styled.div`
+    box-shadow: inset 1px 14px 15px -10px #000000bd;
+
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    top: 100%;
+    left: 45%;
+    background: linear-gradient(45deg,#909090,#b9b9b9);
+    border-top: 7px solid;
+
+
+    ${'' /* &:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      border-left: 16px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 5px solid #b8b8b8;
+      left: -50%;
+      top: 87%
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      border-left: 0px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 5px solid #b8b8b8;
+      left: 100%;
+      top: 87%
+    } */}
+  `
+  const StandBase = styled.div`
+    box-shadow: inset -20px 7px 15px -10px #ffffff;
+
+    border-radius: 15px 15px 0px 0px;
+    position: absolute;
+    height: 5%;
+    width: 30%;
+    top: 120%;
+    left: 35%;
+    background: linear-gradient(45deg,#909090,#bdbdbd);
+
+
+  `
+
+  const ToolsUsed = styled.div`
+    height: 30%;
     width: 100%;
   `
