@@ -14,3 +14,21 @@
   transform: translateX(100%);
   transition: transform 0.5s ease-out;
 }
+
+
+.menu-enter {
+  transform: translateY(-110%);
+  /* width: 0; */
+}
+
+.menu-enter.menu-enter-active {
+  transform: translateY(0%);
+
+  /* width: 100%; */
+  transition: transform 0.5s ease;
+}
+
+.menu-leave {
+  transform: translateY(-110%);
+  transition: transform 0.5s ease;
+}

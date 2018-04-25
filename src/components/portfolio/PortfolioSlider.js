@@ -139,7 +139,7 @@ const SlideContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: width 1s ease;
+  transition: width 0.75s ease;
   position: absolute;
   width: 100%;
   ${props => props.active ? 'width: 80%' : ''};
