@@ -13,11 +13,11 @@ class App extends Component {
       <FullContainer className="App">
         {/* <Top/> */}
 
-        {/* <MiddleContainer>
+        <MiddleContainer>
           <Bio/>
           <SkillsBlock/>
           <Melody/>
-        </MiddleContainer> */}
+        </MiddleContainer>
 
         <BottomContainer>
           <Portfolio/>
@@ -52,5 +52,5 @@ const BottomContainer = styled.section`
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: teal;
+  ${'' /* background-color: teal; */}
 `

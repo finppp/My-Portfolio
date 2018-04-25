@@ -24,13 +24,14 @@ const Container = styled.section`
   font-size: 16px;
   height: 65%;
   width: 100%;
-  background-color: orange;
+  background-color: rgb(255, 255, 255);
 `
 
 const Heading = styled.div`
   height: 10%;
   width: 100%;
   h2 {
+    font-weight: 300;
     font-size: 2em;
     margin: 0 auto;
   }
