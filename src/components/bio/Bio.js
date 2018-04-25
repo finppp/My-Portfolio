@@ -35,7 +35,7 @@ const BlockContainer = styled.section`
 `
 
 const TopHalf = styled.section`
-  background-color: #90d4de;
+  background-color: #4981c9;
   height: 50%;
   width: 100%
 `

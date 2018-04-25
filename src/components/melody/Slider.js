@@ -93,7 +93,7 @@ class Slider extends Component {
 export default Slider;
 
 const activeStyle = {
-  'background-color': 'orange',
+  'background-color': '#f9cc35',
   transition: 'none'
 }
 

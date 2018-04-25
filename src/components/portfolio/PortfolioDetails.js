@@ -6,7 +6,9 @@ class PortfolioDetails extends Component {
     return (
       <ViewSlideContainer>
         <Title>
+          <i onClick={() => this.props.onPreviousPortfolio()} className="far fa-arrow-alt-circle-left"></i>
           <h2>{this.props.itemDetails.title}</h2>
+          <i onClick={() => this.props.onNextPortfolio()} className="far fa-arrow-alt-circle-right"></i>
         </Title>
         <BottomContainer>
           <LeftColumn>
@@ -45,17 +47,29 @@ const ViewSlideContainer = styled.div`
 `
 
 const Title = styled.div`
-  height: 10%;
+  height: 15%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   h2{
+    width: 20%;
+    margin: 10px;
+    display: inline-block;
     font-weight: 400;
     font-size: 2em;
-    margin: 0;
+  }
+  i{
+    cursor: pointer;
+    font-size: 2em;
+    &:hover{
+      color: white;
+    }
   }
 `
 
 const BottomContainer = styled.div`
-  height: 90%;
+  height: 85%;
   width: 100%;
 `
 
@@ -69,7 +83,8 @@ const LeftColumn = styled.div`
     height: 80%;
     width: 100%;
     p {
-
+      margin: 3% 10%;
+      font-size: 1.3em;
     }
   `
   const Outlink = styled.div`

@@ -13,11 +13,11 @@ class App extends Component {
       <FullContainer className="App">
         {/* <Top/> */}
 
-        {/* <MiddleContainer> */}
-          {/* <Bio/> */}
-          {/* <SkillsBlock/> */}
-          {/* <Melody/> */}
-        {/* </MiddleContainer> */}
+        <MiddleContainer>
+          <Bio/>
+          <SkillsBlock/>
+          <Melody/>
+        </MiddleContainer>
 
         <BottomContainer>
           <Portfolio/>

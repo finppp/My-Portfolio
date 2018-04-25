@@ -10,7 +10,7 @@ const portfolioDetails = [
   {
     title: "The Cake Valley",
     screenshots: [cakevalley],
-    bio: "A catering website created using wordpress.",
+    bio: "From planning design with the client, to installing the SSL certificate. A brochure style website created using the Wordpress CMS.",
     tools: [],
     url: "http://thecakevalley.co.uk/"
   },

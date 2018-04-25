@@ -43,7 +43,7 @@ const Button = styled.div`
   color: white;
   &:hover{
     text-decoration: underline;
-    color: rgb(255, 248, 77);
+    color: #f9cc35;
   }
 `
 const VolumeContainer = styled.div`

@@ -20,6 +20,30 @@ class PortfolioSlider extends Component {
     })
   }
 
+  previousPortolio = () => {
+    const currentPortfolioItem = this.state.currentPorfolioItem;
+    let newPortfolioItem = currentPortfolioItem - 1;
+    if (newPortfolioItem <= -1){
+      newPortfolioItem = 6;
+    }
+
+    this.setState({
+      currentPorfolioItem: newPortfolioItem
+    })
+  }
+
+  nextPortolio = () => {
+    const currentPortfolioItem = this.state.currentPorfolioItem;
+    let newPortfolioItem = currentPortfolioItem + 1;
+    if (newPortfolioItem >= 7){
+      newPortfolioItem = 0;
+    }
+
+    this.setState({
+      currentPorfolioItem: newPortfolioItem
+    })
+  }
+
   render() {
     return (
       <Container>
@@ -36,6 +60,8 @@ class PortfolioSlider extends Component {
           <Pick active={this.state.currentPorfolioItem == 6} onClick={() => this.changePortfolioItem(6)} title={portfolioDetails[6].title}/>
         </PickerSection>
         <PortfolioDetails
+          onNextPortfolio={() => this.nextPortolio()}
+          onPreviousPortfolio={() => this.previousPortolio()}
           itemDetails={portfolioDetails[this.state.currentPorfolioItem]}
           />
       </Container>
@@ -47,6 +73,7 @@ class PortfolioSlider extends Component {
 export default PortfolioSlider;
 
 const Container = styled.div`
+  box-shadow: inset 0px 8px 20px 0px #00000029;
   width: 100%;
   height: 90%;
   ${'' /* background-color: green; */}
@@ -119,21 +146,24 @@ const SlideContainer = styled.div`
   height: 90%;
 ${'' /*THIS COLOUR MUST MATCH THE ONE IN THE ABOVE COMPONENT  */}
   ${'' /* background-color: #90d4de; */}
-  background-color: #9a9a9a;
+
+  background-color: #afafaf;
+  background-color: #b8b8b8;
 `
 
 const ArrowContainer = styled.div`
-  background-color: #7a7a7a;
+  background-color: #6c6c6c;
   display: flex;
   align-items: center;
   justify-content: center;
   float: right;
   width: 20%;
   height: 90%;
-  ${'' /* background-color: rgb(51, 158, 199); */}
-  ${'' /* background-color: rgb(173, 233, 255); */}
+  ${props => props.active ? 'background-color: rgb(249,204,53)' : ''};
   i {
     ${props => props.active ? 'color: white' : ''};
     font-size: 2em;
   }
+${'' /* background-color: rgb(51, 158, 199); */}
+${'' /* background-color: rgb(173, 233, 255); */}
 `

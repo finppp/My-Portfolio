@@ -205,8 +205,12 @@ const Container = styled.section`
   width: 50%;
   height: 40%;
   display: inline-block;
-  background-color: #1b3b71;
-  background: linear-gradient(to right, #1b3b71, #1f3966);
+
+  ${'' /* background-color: #1b3b71; */}
+  background-color: #353535;
+  background-color: #4981c9;
+
+  ${'' /* background: linear-gradient(to right, #1b3b71, #1f3966); */}
 
 
   p {
