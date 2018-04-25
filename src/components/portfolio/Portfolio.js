@@ -7,9 +7,6 @@ class Portfolio extends Component {
   render() {
     return (
       <Container>
-        <Heading>
-          <h2>My Work.</h2>
-        </Heading>
         <PortfolioSlider />
       </Container>
     );
@@ -24,16 +21,7 @@ const Container = styled.section`
   font-size: 16px;
   height: 65%;
   width: 100%;
-  background-color: rgb(255, 255, 255);
-`
-
-const Heading = styled.div`
-  height: 10%;
-  width: 100%;
-  h2 {
-    font-weight: 300;
-    font-size: 2em;
-    margin: 0 auto;
-  }
-
+  background: linear-gradient(45deg,rgb(255, 255, 255),rgb(210, 210, 210));
+  ${'' /* background: linear-gradient(45deg, rgb(217, 217, 217), rgb(93, 93, 93)); */}
+  background-color: #90d4de;
 `

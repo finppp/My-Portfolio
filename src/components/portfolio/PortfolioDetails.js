@@ -11,10 +11,10 @@ class PortfolioDetails extends Component {
         <BottomContainer>
           <LeftColumn>
             <TextDetails>
-              <p>{this.props.itemDetails.details}</p>
+              <p>{this.props.itemDetails.bio}</p>
             </TextDetails>
             <Outlink>
-              <a href={this.props.itemDetails.outlink}>Visit Site -></a>
+              <a target="_blank" href={this.props.itemDetails.url}>Visit Site <i class="fas fa-external-link-alt"></i></a>
             </Outlink>
           </LeftColumn>
           <RightColumn>
@@ -76,7 +76,7 @@ const LeftColumn = styled.div`
     height: 20%;
     width: 100%;
     a {
-
+      font-size: 2em;
     }
   `
 
