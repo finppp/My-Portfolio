@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import screenshot from '../../images/RowSquad/rowsquad-dashboard.PNG';
+import cakevalley from '../../images/cakevalley/cakevalley-home.png';
+import boathouse from '../../images/cakevalley/cakevalley-home.png';
+import cakevalley from '../../images/cakevalley/cakevalley-home.png';
+import cakevalley from '../../images/cakevalley/cakevalley-home.png';
+import cakevalley from '../../images/cakevalley/cakevalley-home.png';
 
 class PortfolioSlider extends Component {
 
@@ -225,14 +229,14 @@ const RightColumn = styled.div`
     ${'' /* height: 67%; */}
     ${'' /* width: 56%; */}
     top: 3%;
-    left: 22%;
+    ${'' /* left: 22%; */}
     background-color: green;
     z-index: 2;
     margin-right: 10%;
   `
 
   const Stand = styled.div`
-    box-shadow: inset 1px 14px 15px -10px #000000bd;
+    box-shadow: inset 1px 14px 15px -10px #000000bd, inset 20px -1px 16px 0px #00000073;
 
     position: absolute;
     height: 20%;
@@ -265,7 +269,7 @@ const RightColumn = styled.div`
     } */}
   `
   const StandBase = styled.div`
-    box-shadow: inset -20px 7px 15px -10px #ffffff;
+    box-shadow: inset -20px 7px 15px -10px #ffffff, inset 20px -1px 16px 0px #00000073;
 
     border-radius: 15px 15px 0px 0px;
     position: absolute;
