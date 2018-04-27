@@ -1,10 +1,12 @@
 /* config-overrides.js */
 const rewireStyledComponents = require('react-app-rewire-styled-components');
+const rewireReactHotLoader = require('react-app-rewire-hot-loader')
 
-const config =
 
-module.exports = function override(config, env) {
-  //do stuff with the webpack config...
+
+/* config-overrides.js */
+module.exports = function override (config, env) {
+  config = rewireReactHotLoader(config, env)
   config = rewireStyledComponents(config, env);
-  return config;
+  return config
 }

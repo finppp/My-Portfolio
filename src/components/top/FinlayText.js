@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import * as colourSwatch from '../../variables/colours';
 
 class FinlayText extends Component {
 
@@ -7,7 +8,7 @@ class FinlayText extends Component {
     return (
       <AbsoluteContainer>
         <HeadingContainer>
-          <HeadingText>Finlay Percy</HeadingText>
+          <HeadingText currentColour={this.props.currentColour}>Finlay Percy</HeadingText>
         </HeadingContainer>
       </AbsoluteContainer>
     );
@@ -38,8 +39,9 @@ const HeadingText = styled.h1`
   font-size: 13vw;
   font-weight: 800;
   line-height: 13vw;
-  color: rgb(255, 255, 255);
-  font-family: 'Nunito', sans-serif;
+  color: ${props => colourSwatch.activeColours[props.currentColour]};
+  ${'' /* color: rgb(255, 209, 56); */}
+  ${'' /* font-family: 'Nunito', sans-serif; */}
 `
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Open Sans', sans-serif;

@@ -10,17 +10,11 @@ class MagicSquare extends Component {
     this.state = {};
   }
 
-  colourChange = (newColourNumber) => {
+  colourChange = (currentColourNumber) => {
     let squareNumber = this.props.squareNumber;
-    switch (newColourNumber) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-
-        break;
-      default:
-        console.log("newColourNumber does not match the switch. this is a problem");
+    currentColourNumber++;
+    if (currentColourNumber >=4) {
+      currentColourNumber = 0;
     }
 
     let disabled = false;
@@ -28,48 +22,52 @@ class MagicSquare extends Component {
     // disabled = true;
 
     if (!disabled) {
+
       //write to Firebase database
       database.ref('/magic-squares/').update({
-        [squareNumber]  : newColourNumber
+        [squareNumber]  : currentColourNumber
       });
     }
   }
 
+  mobileColourChange = (currentColourNumber) => {
+    let squareNumber = this.props.squareNumber;
+    currentColourNumber++;
+    if (currentColourNumber >=4) {
+      currentColourNumber = 0;
+    }
+
+    setTimeout(function(){
+      database.ref('/magic-squares/').update({
+          [squareNumber+1]  : currentColourNumber
+        });
+      }, 200);
+    setTimeout(function(){
+      database.ref('/magic-squares/').update({
+          [squareNumber+2]  : currentColourNumber
+        });
+      }, 400);
+    setTimeout(function(){
+      database.ref('/magic-squares/').update({
+          [squareNumber+3]  : currentColourNumber
+        });
+      }, 600);
+
+    database.ref('/magic-squares/').update({
+      [squareNumber]  : currentColourNumber
+    });
+  }
+
 
   render() {
-    switch (this.props.currentColourNumber) {
-      case 1:
-      return (
-        <ColourOneDiv onMouseEnter={() => this.colourChange(2)} onTouchStart={() => this.colourChange(2)}>
+    return (
+      <BoxDiv
+        style={{'background-color': `${colourSwatch.greys[this.props.currentColourNumber]}`}}
+        onDragEnter={() => this.colourChange(this.props.currentColourNumber)}
+        onMouseEnter={() => this.colourChange(this.props.currentColourNumber)}>
           &nbsp;
-        </ColourOneDiv>
-      )
-        break;
-      case 2:
-      return (
-        <ColourTwoDiv onMouseEnter={() => this.colourChange(3)}>
-          &nbsp;
-        </ColourTwoDiv>
-      )
-        break;
-      case 3:
-      return (
-        <ColourThreeDiv onMouseEnter={() => this.colourChange(4)}>
-          &nbsp;
-        </ColourThreeDiv>
-      )
-        break;
-      case 4:
-      return (
-        <ColourFourDiv onMouseEnter={() => this.colourChange(1)}>
-          &nbsp;
-        </ColourFourDiv>
-      )
-        break;
-      default:
-      console.log("current number doesnt match switch");
-      return null
-    }
+      </BoxDiv>
+    )
   }
 
 
@@ -85,6 +83,7 @@ const BoxDiv = styled.div`
   width: 4.8vw;
   height: 4.8vw;
   margin: 0.2vw;
+  ${'' /* transition: all .1s ease-out; */}
 
   @media (max-width: 1200px) {
     width: 9.6vw;
@@ -94,17 +93,5 @@ const BoxDiv = styled.div`
 `
 
 const ColourOneDiv = BoxDiv.extend`
-  background-color: ${colourSwatch.colours[0]};
-`
-
-const ColourTwoDiv = BoxDiv.extend`
-  background-color: ${colourSwatch.colours[1]};
-`
-
-const ColourThreeDiv = BoxDiv.extend`
-  background-color: ${colourSwatch.colours[2]};
-`
-
-const ColourFourDiv = BoxDiv.extend`
-  background-color: ${colourSwatch.colours[3]};
+  ;
 `

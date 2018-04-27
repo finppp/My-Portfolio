@@ -13,11 +13,27 @@ import Contact from './components/contact/Contact';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class App extends Component {
+
+constructor(props) {
+  super(props);
+  this.state = {currentColour: 0};
+}
+
+changeWebsiteColour = (newColour) => {
+  this.setState({
+    currentColour: newColour
+  })
+}
   render() {
+    console.log(this.state.currentColour);
     return (
       <FullContainer id="ContainerElementID" className="App">
-        <Menu/>
-        <Top/>
+        <Menu
+          changeWebsiteColour={(colour) => this.changeWebsiteColour(colour)}
+          currentColour={this.state.currentColour}/>
+
+        <Top
+          currentColour={this.state.currentColour}/>
 
         <MiddleContainer>
           <Bio/>
@@ -26,8 +42,10 @@ class App extends Component {
         </MiddleContainer>
 
         <BottomContainer name="bottom" >
-          <Portfolio />
-          <Contact/>
+          <Portfolio
+            currentColour={this.state.currentColour}/>
+          <Contact
+            currentColour={this.state.currentColour}/>
         </BottomContainer>
       </FullContainer>
     );

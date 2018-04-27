@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import portfolioDetails from '../../variables/portfolioData';
 import PortfolioDetails from './PortfolioDetails'
+import * as colourSwatch from '../../variables/colours';
 
 import styled from 'styled-components';
 
@@ -51,13 +52,13 @@ class PortfolioSlider extends Component {
           <Title>
             <h2>My Recent Work.</h2>
           </Title>
-          <Pick active={this.state.currentPorfolioItem == 0} onClick={() => this.changePortfolioItem(0)} title={portfolioDetails[0].title}/>
-          <Pick active={this.state.currentPorfolioItem == 1} onClick={() => this.changePortfolioItem(1)} title={portfolioDetails[1].title}/>
-          <Pick active={this.state.currentPorfolioItem == 2} onClick={() => this.changePortfolioItem(2)} title={portfolioDetails[2].title}/>
-          <Pick active={this.state.currentPorfolioItem == 3} onClick={() => this.changePortfolioItem(3)} title={portfolioDetails[3].title}/>
-          <Pick active={this.state.currentPorfolioItem == 4} onClick={() => this.changePortfolioItem(4)} title={portfolioDetails[4].title}/>
-          <Pick active={this.state.currentPorfolioItem == 5} onClick={() => this.changePortfolioItem(5)} title={portfolioDetails[5].title}/>
-          <Pick active={this.state.currentPorfolioItem == 6} onClick={() => this.changePortfolioItem(6)} title={portfolioDetails[6].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 0} onClick={() => this.changePortfolioItem(0)} title={portfolioDetails[0].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 1} onClick={() => this.changePortfolioItem(1)} title={portfolioDetails[1].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 2} onClick={() => this.changePortfolioItem(2)} title={portfolioDetails[2].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 3} onClick={() => this.changePortfolioItem(3)} title={portfolioDetails[3].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 4} onClick={() => this.changePortfolioItem(4)} title={portfolioDetails[4].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 5} onClick={() => this.changePortfolioItem(5)} title={portfolioDetails[5].title}/>
+          <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 6} onClick={() => this.changePortfolioItem(6)} title={portfolioDetails[6].title}/>
         </PickerSection>
         <PortfolioDetails
           onNextPortfolio={() => this.nextPortolio()}
@@ -101,12 +102,13 @@ const Title = styled.div`
 
 class Pick extends Component {
   render() {
+    console.log(this.props.currentColour);
     return (
       <PickContainer onClick={this.props.onClick} active={this.props.active}>
         <SlideContainer className="slides" active={this.props.active}>
         <p>{this.props.title}</p>
         </SlideContainer>
-        <ArrowContainer active={this.props.active}>
+        <ArrowContainer currentColour={this.props.currentColour} active={this.props.active}>
           <i className="fas fa-arrow-right"></i>
         </ArrowContainer>
       </PickContainer>
@@ -162,7 +164,9 @@ const ArrowContainer = styled.div`
   float: right;
   width: 20%;
   height: 90%;
-  ${props => props.active ? 'background-color: rgb(249,204,53)' : ''};
+  ${'' /* color: ${props => colourSwatch.activeColours[props.currentColour]}; */}
+
+  ${props => props.active ? 'background-color: ' + colourSwatch.activeColours[props.currentColour] : ''};
   i {
     ${props => props.active ? 'color: white' : ''};
     font-size: 2em;

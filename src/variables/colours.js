@@ -18,3 +18,17 @@ export const colours = [
   'rgb(255, 105, 178)',
   'rgb(255, 203, 103)'
 ];
+
+export const greys = [
+  'rgb(46, 46, 46)',
+  'rgb(112, 112, 112)',
+  'rgb(156, 156, 156)',
+  'rgb(194, 194, 194)'
+];
+
+export const activeColours = [
+  'rgb(255, 210, 56)',
+  'rgb(172, 131, 255)',
+  'rgb(92, 255, 191)',
+  'rgb(255, 105, 178)'
+];

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import * as colourSwatch from '../../variables/colours';
 
 
 class Contact extends Component {
 
   render() {
     return (
-      <Container name="contact">
+      <Container currentColour={this.props.currentColour} name="contact">
         <Title>
-          <h2>Say Yellow!</h2>
+          <h2>Say Hello!</h2>
         </Title>
         <ContactDetails>
           <h2><i className="far fa-envelope"></i> <a target="_blank" rel="noopener noreferrer" href="mailto:finlaypercy@hotmail.com?Subject=Hi%20Finlay">fin@foldedgroup.com</a></h2>
@@ -26,7 +27,9 @@ export default Contact;
 const Container = styled.div`
   height: 33%;
   width: 100%;
-  background-color: #f9cc35;
+  background-color: ${props => colourSwatch.activeColours[props.currentColour]};
+
+  ${'' /* background-color: #f9cc35; */}
 `
 const Title = styled.div`
   display: flex;

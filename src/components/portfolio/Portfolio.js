@@ -7,7 +7,7 @@ class Portfolio extends Component {
   render() {
     return (
       <Container name="portfolio">
-        <PortfolioSlider />
+        <PortfolioSlider currentColour={this.props.currentColour}/>
       </Container>
     );
   }
