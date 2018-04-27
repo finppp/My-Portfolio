@@ -36,20 +36,28 @@ class Menu extends Component {
 
     this.setState({
       displayMenu: newState,
-      confetti: !newState
+      confetti: false
     })
   }
 
   scrollTo = (element) => {
     this.setState({
       displayMenu: false,
-      confetti: true
+      confetti: false
     })
     scroller.scrollTo(element, {
       duration: 500,
       smooth: true,
       containerId: 'ContainerElementID',
       // offset: 50 // Scrolls to element + 50 pixels down the page
+    })
+
+  }
+
+  triggerConfetti = () => {
+    this.setState({
+      displayMenu: false,
+      confetti: true
     })
 
   }
@@ -79,27 +87,35 @@ class Menu extends Component {
             >
             {this.state.displayMenu &&
               <div>
-                <MenuItem onClick={() => this.scrollTo('top')}>
+                <MenuItem key={0} onClick={() => this.scrollTo('top')}>
                   <p>Home</p>
                 </MenuItem>
-                <MenuItem onClick={() => this.scrollTo('bio')}>
+
+                <MenuItem key={1} onClick={() => this.triggerConfetti()}>
+                  <p>Confetti</p>
+                </MenuItem>
+
+                <MenuItem key={2} onClick={() => this.scrollTo('bio')}>
                   <p>About me</p>
                 </MenuItem>
-                <MenuItem onClick={() => this.scrollTo('skills')}>
-                  <p>Skills</p>
-                </MenuItem>
-                <MenuItem onClick={() => this.scrollTo('outlinks')}>
-                  <p>Externals</p>
-                </MenuItem>
-                <MenuItem onClick={() => this.scrollTo('melody')}>
+
+                <MenuItem key={3} onClick={() => this.scrollTo('melody')}>
                   <p>Melody</p>
                 </MenuItem>
-                <MenuItem onClick={() => this.scrollTo('portfolio')}>
+
+                <MenuItem key={4} onClick={() => this.scrollTo('portfolio')}>
                   <p>Portfolio</p>
                 </MenuItem>
-                <MenuItem onClick={() => this.scrollTo('contact')}>
+
+                <MenuItem key={5} onClick={() => this.scrollTo('bottom')}>
                   <p>Contact</p>
                 </MenuItem>
+                {/* <MenuItem onClick={() => this.scrollTo('skills')}>
+                  <p>Skills</p>
+                </MenuItem> */}
+                {/* <MenuItem onClick={() => this.scrollTo('outlinks')}>
+                  <p>Externals</p>
+                </MenuItem> */}
               </div>
             }
 

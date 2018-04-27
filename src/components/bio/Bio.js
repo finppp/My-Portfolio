@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import MeImg from '../../images/me-cropped-bw.jpg'
 import Outlinks from './Outlinks';
+import { min, max } from '../../variables/mediaTemplates';
 
 class Bio extends Component {
 
@@ -32,11 +33,15 @@ const BlockContainer = styled.section`
   float: left;
   width: 50%;
   height: 100%;
+  ${max.desktop`
+    width: 100%;
+    height: 50%;
+  `}
 `
 
 const TopHalf = styled.section`
   background-color: #4981c9;
-  background-color: #90d4de;
+  ${'' /* background-color: #90d4de; */}
 
   height: 50%;
   width: 100%

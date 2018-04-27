@@ -57,7 +57,7 @@ const skillData = [
     icon: cloudSVG
   },
   {
-    title: "Search Engine Optimisation",
+    title: "S.E.O.",
     icon: seoSVG
   },
   {

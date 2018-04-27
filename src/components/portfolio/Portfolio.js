@@ -19,7 +19,8 @@ export default Portfolio;
 
 const Container = styled.section`
   font-size: 16px;
-  height: 65%;
+  height: 66%;
+  padding-bottom: 1%;
   width: 100%;
   background: linear-gradient(45deg,rgb(255, 255, 255),rgb(210, 210, 210));
   ${'' /* background: linear-gradient(45deg, rgb(217, 217, 217), rgb(93, 93, 93)); */}

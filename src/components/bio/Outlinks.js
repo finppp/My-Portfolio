@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
+import { min, max } from '../../variables/mediaTemplates';
 class Outlinks extends Component {
   render() {
     return (
@@ -19,6 +19,10 @@ const OutlinksContainer = styled.section`
   display: inline-block;
   width: 60%;
   height: 100%;
+  ${max.desktop`
+    width: 60%;
+    height: 50%;
+  `}
 
   h2 {
     height: 10%;

@@ -40,7 +40,7 @@ class MagicSquare extends Component {
     switch (this.props.currentColourNumber) {
       case 1:
       return (
-        <ColourOneDiv onMouseEnter={() => this.colourChange(2)}>
+        <ColourOneDiv onMouseEnter={() => this.colourChange(2)} onTouchStart={() => this.colourChange(2)}>
           &nbsp;
         </ColourOneDiv>
       )

@@ -11,7 +11,6 @@ class Sliders extends Component {
   }
 
   render() {
-    console.log(this.props.currentStep);
     return (
       <SlidersContainer>
         <Slider currentStep={this.props.currentStep} sliderValue={this.props.melody[0]} key={0} sliderId={0} onValueChange={(sliderData) => this.props.onMelodyChange(sliderData)}/>

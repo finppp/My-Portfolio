@@ -82,6 +82,9 @@ const Container = styled.div`
 const PickerSection = styled.div`
   float: left;
   width: 30%;
+  @media (max-width: 700px){
+    display: none;
+  }
   height: 100%;
   ${'' /* background-color: orange; */}
 `

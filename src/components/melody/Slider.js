@@ -24,7 +24,6 @@ class Slider extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps.currentStep, nextProps.sliderId);
     if(nextProps.currentStep == nextProps.sliderId) {
       this.setState({
         noteActive: true

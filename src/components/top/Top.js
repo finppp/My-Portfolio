@@ -21,6 +21,7 @@ class Top extends Component {
 export default Top;
 
 const TopContainer = styled.section `
+  overflow: hidden;
   ${'' /* background-color: red; */}
   width: 100%;
   position: relative;

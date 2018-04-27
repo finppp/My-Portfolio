@@ -7,6 +7,7 @@ import MelodyOverlay from './MelodyOverlay';
 import { CSSTransitionGroup } from 'react-transition-group';
 import '../../Animations.css';
 import { database } from '../../database';
+import { min, max } from '../../variables/mediaTemplates';
 
 
 class Melody extends Component {
@@ -203,6 +204,15 @@ const Container = styled.section`
   position: relative;
   font-size: 16px;
   width: 50%;
+  ${max.desktop`
+    width: 100%;
+    height: 20%;`
+  }
+
+  ${'' /* @media (max-width: 700px){
+    width: 100%;
+    height: 20%;
+  } */}
   height: 40%;
   display: inline-block;
 

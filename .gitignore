@@ -24,3 +24,6 @@ yarn-error.log*
 /functions/node_modules/
 
 firebase-debug.log
+
+# Temp Images
+/src/images

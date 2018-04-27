@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import {Motion, spring} from 'react-motion';
+import media from '../../variables/mediaTemplates'
 
 import SkillReadMoreSection from './SkillReadMoreSection';
 import * as colourSwatch from '../../variables/colours';
@@ -166,7 +167,7 @@ const SkillBox = styled.div`
 
 
 const SkillText = styled.p`
-  font-size: 1.1em;
+  font-size: 1em;
   padding-left: 10px;
   font-family: 'Nunito',sans-serif;
   color: white;

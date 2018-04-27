@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { max, min } from '../../variables/mediaTemplates'
 import * as colourSwatch from '../../variables/colours';
+
+
 class SkillsTitle extends Component {
 
   render() {
@@ -42,8 +45,19 @@ const Container = styled.div`
   width: calc(200% / 7);
   text-align: left;
   P {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+user-select: none;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
+    ${min.giant`
+      font-size: 2.3em;
+    `}
+    ${min.xl`
+      font-size: 3em;
+    `}
     margin: 5px 5px 5px 20px;
     & span{
       transition: ease-out color 1s;
