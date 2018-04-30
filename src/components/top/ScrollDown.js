@@ -43,7 +43,9 @@ const Container = styled.div`
     pointer-events: all;
     cursor: pointer;
     font-size: 3em;
-    ${'' /* color: rgb(255, 209, 56); */}
+    ${'' /* color: rgb(255, 209, 56); */}1
+    transition: color 0.2s linear;
+
     color: ${props => colourSwatch.activeColours[props.currentColour]};
 
   }

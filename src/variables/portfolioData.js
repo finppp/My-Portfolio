@@ -8,53 +8,72 @@ import tshirt from '../images/tshirt/tshirt-home.png';
 
 const portfolioDetails = [
   {
-    title: "The Cake Valley",
+    title: `The Cake Valley`,
     screenshots: [cakevalley],
-    bio: "From planning design with the client, to installing the SSL certificate. A brochure style website created using the Wordpress CMS.",
+    bio: `A simple brochure style website for a catering and afternoon teas company.
+
+    From planning design with the client, to installing the SSL certificate.
+
+    A clean and simple website created using the Wordpress CMS.`,
     tools: [],
-    url: "http://thecakevalley.co.uk/"
+    url: `http://thecakevalley.co.uk/`
   },
+
   {
-    title: "MyBoathouse",
+    title: `MyBoathouse`,
     screenshots: [boathouse],
-    bio: "The long bit of text goes here",
+    bio: `A classifieds website for rowing boats, equipment and jobs.
+
+    This web application has a wide range of features implemented using Firebase database to serve dynamic content.
+
+    Created using: HTML, CSS, Vanilla JavaScript, Firebase.`,
     tools: [],
-    url: "https://myboathouse.co.uk/"
+    url: `https://myboathouse.co.uk/`
   },
   {
-    title: "Folded Group",
+    title: `Folded Group`,
     screenshots: [folded],
-    bio: "The long bit of text goes here",
+    bio: `A fun and colourful website to promoting Folded Group, a web design company.`,
     tools: [],
-    url: "https://foldedgroup.com/"
+    url: `https://foldedgroup.com/`
   },
   {
-    title: "Paddywack Prints",
+    title: `Paddywack Prints`,
     screenshots: [paddywack],
-    bio: "The long bit of text goes here",
+    bio: `An e-commerce shop selling prints of illustrations and photography.
+
+    Created using Woocommerce, and e-commerce platform built on Wordpress.
+
+    Launching June 2018.`,
     tools: [],
-    url: "https://paddywackprints.co.uk/"
+    url: `https://paddywackprints.co.uk/`
   },
   {
-    title: "RowSquad",
+    title: `RowSquad`,
     screenshots: [rowsquad],
-    bio: "The long bit of text goes here",
+    bio: `A web application for recording, and presenting training data between coaches and athletes.
+
+    Created using ReactJS & Firebase.`,
     tools: [],
-    url: "https://rowsquad.com/"
+    url: `https://rowsquad.com/`
   },
   {
-    title: "Telscombe Village",
+    title: `Telscombe Village`,
     screenshots: [telscombe],
-    bio: "The long bit of text goes here",
+    bio: `A website to promote a local village club.
+
+    Created using the WordPress.`,
     tools: [],
-    url: "https://telscombevillageclub.co.uk/"
+    url: `https://telscombevillageclub.co.uk/`
   },
   {
-    title: "Tshirt.co.uk",
+    title: `Tshirt.co.uk`,
     screenshots: [tshirt],
-    bio: "The long bit of text goes here",
+    bio: `A website for a t-shirt printing company.
+    
+    Created using CSS, HTML and Javascript.`,
     tools: [],
-    url: "http://www.tshirt.co.uk/"
+    url: `http://www.tshirt.co.uk/`
   }
 ]
 

@@ -8,6 +8,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import '../../Animations.css';
 import { database } from '../../database';
 import { min, max } from '../../variables/mediaTemplates';
+import * as colourSwatch from '../../variables/colours';
 
 
 class Melody extends Component {
@@ -20,12 +21,17 @@ class Melody extends Component {
       savedToDatabase: false,
       volume: 10
     };
+
+    // this.AudioContext = window.AudioContext // Default
+    //   || window.webkitAudioContext // Safari and old versions of Chrome
+    //   || false;
   }
 
 
   componentDidMount() {
 
     this.loadMelodyFromDatabase();
+    // this.setupContext();
     this.soundSetup();
     const height = this.melodyContainer.clientHeight;
     this.setState({
@@ -34,14 +40,20 @@ class Melody extends Component {
     })
   }
 
-  audioCtx = new AudioContext();
+  getNewContext = () => {
+    var AudioContext =  window.webkitAudioContext || window.AudioContext;
+    return new AudioContext
+  }
+
+  audioCtx = this.getNewContext();
+
   synth = this.audioCtx.createOscillator();
   mainVolume = this.audioCtx.createGain();
   ampEnvelope = this.audioCtx.createGain();
 
   soundSetup = () => {
     //Synth setup
-    this.synth.type = 'saw';
+    this.synth.type = 'square';
     this.synth.frequency.setValueAtTime(440, this.audioCtx.currentTime);
     this.synth.connect(this.ampEnvelope);
 
@@ -162,7 +174,7 @@ class Melody extends Component {
 
   render() {
     return (
-      <Container name="melody" innerRef={(melodyContainer) => this.melodyContainer = melodyContainer}>
+      <Container currentColour={this.props.currentColour} name="melody" innerRef={(melodyContainer) => this.melodyContainer = melodyContainer}>
         <CSSTransitionGroup
             transitionName="slidein"
             transitionAppear={false}
@@ -216,9 +228,10 @@ const Container = styled.section`
   height: 40%;
   display: inline-block;
 
-  ${'' /* background-color: #1b3b71; */}
-  background-color: #353535;
-  background-color: #4981c9;
+  background-color: #1b3b71;
+  transition: background-color 0.2s linear;
+  ${props => 'background-color: ' + colourSwatch.activeColoursDark[props.currentColour]};
+
 
   ${'' /* background: linear-gradient(to right, #1b3b71, #1f3966); */}
 

@@ -27,6 +27,7 @@ export default Contact;
 const Container = styled.div`
   height: 33%;
   width: 100%;
+  transition: background-color 0.2s linear;
   background-color: ${props => colourSwatch.activeColours[props.currentColour]};
 
   ${'' /* background-color: #f9cc35; */}

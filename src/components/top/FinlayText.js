@@ -36,9 +36,11 @@ const HeadingContainer = styled.div`
 const HeadingText = styled.h1`
   letter-spacing: 2vw;
   width: 70%;
-  font-size: 13vw;
+  font-size: 15vw;
   font-weight: 800;
   line-height: 13vw;
+  transition: color 0.2s linear;
+
   color: ${props => colourSwatch.activeColours[props.currentColour]};
   ${'' /* color: rgb(255, 209, 56); */}
   ${'' /* font-family: 'Nunito', sans-serif; */}

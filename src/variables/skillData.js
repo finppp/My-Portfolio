@@ -19,75 +19,100 @@ import cordovaSVG from '../icons/cordova.svg'
 
 const skillData = [
   {
-    title: "Javascript",
+    title: `JavaScript`,
     icon: javascriptSVG,
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: `I have over 5 years experience with JavaScript and is my strongest programming language.
+
+    Each project in my portfolio has at least some use of JavaScript.`
   },
   {
-    title: "React.js",
-    icon: reactSVG
+    title: `ReactJS`,
+    icon: reactSVG,
+    description: `ReactJS is my go to framework for creating web apps.
+
+    I have used ReactJS with Styled Components in several projects including this website.
+    You can view the code to this portfolio on my GitHub page.`
   },
   {
-    title: "Firebase",
-    icon: firebaseSVG
+    title: `Firebase`,
+    icon: firebaseSVG,
+    description: `I have used Firebase databases in many web applications. I have used it in this website to create the interactive grid system at the top of this page. `
   },
   {
-    title: "Git",
-    icon: gitSVG
+    title: `Git`,
+    icon: gitSVG,
+    description: `A standard in version control. I have used this in every single project.`
   },
   {
-    title: "Github",
-    icon: githubSVG
+    title: `Github`,
+    icon: githubSVG,
+    description: `I use Github on nearly all my projects. It is an amazing tool when working on code as a team. I have created created bug  reports on open source projects, helping other developers fix issues with their software. Through the years I have created hundreds of Issues on GitHub and spent time prioritising which issues need to be fixed first.`
   },
   {
-    title: "HTML",
-    icon: htmlSVG
+    title: `HTML`,
+    icon: htmlSVG,
+    description: `I have used HTML for many years. Through to accessibility features such as ARIA. When to use certain tags and when to avoid.`
   },
   {
-    title: "CSS3",
-    icon: cssSVG
+    title: `CSS3`,
+    icon: cssSVG,
+    description: `lorem`
   },
   {
-    title: "Sass",
-    icon: sassSVG
+    title: `Sass`,
+    icon: sassSVG,
+    description: `lorem`
 
   },
   {
-    title: "Google Cloud Services",
-    icon: cloudSVG
+    title: `Google Cloud Services`,
+    icon: cloudSVG,
+    description: `I have had the most use in hosting and maintenance using Googles Cloud infrastructure.
+    This ranges from tasks such as scheduling database backups, installing SSL certificates, writing Cloud Functions to resize images in database storage and beyond.`
   },
   {
-    title: "S.E.O.",
-    icon: seoSVG
+    title: `SEO & Analytics`,
+    icon: seoSVG,
+    description: `I have used Google AdWords, AdSense and Analytics. From searching for great keywords to target to altering content and copy to boost ranking performance.
+
+    I have used Analytics on a range of projects from launch, using this information to help shape the future of the websites/Direction of the.`
   },
   {
-    title: "Adobe CC",
+    title: `Adobe CC`,
     icon: photoshopSVG,
+    description: `I have used a variety of Adobes products grasping the essential tools required to get by.
+    This has been a great lesson in image optimisation in the web world, learning about image sizing, compression and images formats.`
     // icon2: illustratorSVG,
   },
   {
-    title: "C++",
-    icon: cSVG
+    title: `C++`,
+    icon: cSVG,
+    description: `C++ was my introduction to the programming world. This is where my passion in programming began. This is a language that I have not had many opportunities to. But is a language I am looking to get back to learning and mastering.`
   },
   {
-    title: "Cordova",
-    icon: cordovaSVG
+    title: `Cordova`,
+    icon: cordovaSVG,
+    description: `I have created several mobile applications using Cordova. This has allowed me to further my web programming skills while launching applications on the Google Play Store.`
   },
   {
-    title: "WordPress",
-    icon: wordpressSVG
+    title: `WordPress`,
+    icon: wordpressSVG,
+    description: `I have created a wide range of websites using the wordpress contenet mangements system. I have also had excellent experience helping guide clients through how to use Wordpress`
   },
   {
-    title: "Arduino & Electronics",
-    icon: arduinoSVG
+    title: `Arduino & Electronics`,
+    icon: arduinoSVG,
+    description: `I have a good understanding of circuitry which has led me me havin g a great overall comporehensiln of input output systems. This was also my introduction to programming in C++, which Arduino code is a dialect of.`
   },
   {
-    title: "Digital Audio & DSP",
-    icon: audioSVG
+    title: `Digital Audio & DSP`,
+    icon: audioSVG,
+    description: `With a BSc in Music and Audio Technology I have excellent knowledge of how audio systems work. Using software such as Max to design signal flows. Through to implementing These designs in web applications using JavaScript. I have written beat detection algorithms in JavaScript, which have been used in my Android applications I have written. `
   },
   {
-    title: "Cubase?",
-    icon: audioSVG
+    title: `Gulp & Grunt`,
+    icon: audioSVG,
+    description: `lorem`
   },
 ]
 

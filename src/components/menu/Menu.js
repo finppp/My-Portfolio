@@ -28,7 +28,7 @@ class Menu extends Component {
     super(props);
     this.state = {
       confetti: false,
-      displayMenu: true
+      displayMenu: false
     };
   }
 
@@ -223,6 +223,8 @@ const ColourChoice = styled.div`
   margin: 5px 10px 5px 0px;
 `
 const Colour = styled.div`
+  ${'' /* transition: background-color 0.2s linear; */}
+
   cursor: pointer;
   font-size: 16px;
   margin: 5px;

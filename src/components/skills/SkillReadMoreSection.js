@@ -94,6 +94,7 @@ const TextContainer = styled.div`
   height: 100%;
   text-align: left;
   p{
+    white-space: pre-line;
     margin: 20px 14% 20px 40px;
     font-size: 1.3em;
   }

@@ -165,6 +165,7 @@ const ArrowContainer = styled.div`
   width: 20%;
   height: 90%;
   ${'' /* color: ${props => colourSwatch.activeColours[props.currentColour]}; */}
+  transition: background-color 0.2s linear;
 
   ${props => props.active ? 'background-color: ' + colourSwatch.activeColours[props.currentColour] : ''};
   i {

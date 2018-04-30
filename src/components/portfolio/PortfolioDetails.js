@@ -83,6 +83,7 @@ const LeftColumn = styled.div`
     height: 80%;
     width: 100%;
     p {
+      white-space: pre-line;
       margin: 3% 10%;
       font-size: 1.3em;
     }

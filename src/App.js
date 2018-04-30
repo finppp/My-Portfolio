@@ -36,16 +36,14 @@ changeWebsiteColour = (newColour) => {
           currentColour={this.state.currentColour}/>
 
         <MiddleContainer>
-          <Bio/>
+          <Bio currentColour={this.state.currentColour}/>
           <SkillsBlock/>
-          <Melody/>
+          <Melody currentColour={this.state.currentColour}/>
         </MiddleContainer>
 
         <BottomContainer name="bottom" >
-          <Portfolio
-            currentColour={this.state.currentColour}/>
-          <Contact
-            currentColour={this.state.currentColour}/>
+          <Portfolio currentColour={this.state.currentColour}/>
+          <Contact currentColour={this.state.currentColour}/>
         </BottomContainer>
       </FullContainer>
     );

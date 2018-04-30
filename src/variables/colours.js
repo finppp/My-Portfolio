@@ -32,3 +32,13 @@ export const activeColours = [
   'rgb(92, 255, 191)',
   'rgb(255, 105, 178)'
 ];
+
+export const activeColoursDark = [
+  'rgb(99, 61, 130)',
+  'rgb(75, 53, 121)',
+  'rgb(40, 103, 79)',
+  '#73073d'
+];
+
+// 'rgb(136, 106, 0)',
+// 'rgb(10, 136, 87)',
