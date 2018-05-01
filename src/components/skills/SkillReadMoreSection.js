@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import '../../Animations.css'
+import { min, max } from '../../variables/mediaTemplates'
 
 class SkillReadMoreSection extends Component {
 
@@ -47,7 +48,11 @@ const CloseButton = styled.div`
   top: 0;
   left: 0;
   display: inline-block;
-  font-size: 5em;
+  font-size: 2.3em;
+  ${min.phone`font-size: 2em;`}
+  ${min.tablet`font-size: 3em;`}
+  ${min.desktop`font-size: 3em;`}
+  ${min.xl`font-size: 5em;`}
   padding-left: 0.3em;
   transition: color 1s;
 
@@ -64,7 +69,12 @@ const Heading = styled.p`
   display: inline-block;
   width: 100%;
   height: 100%;
-  font-size: 3em;
+
+  font-size: 2em;
+  ${min.phone`font-size: 2.2em;`}
+  ${min.tablet`font-size: 2.2em;`}
+  ${min.desktop`font-size: 2em;`}
+  ${min.xl`font-size: 3em;`}
 `
 
 const BottomSection = styled.div`
@@ -96,6 +106,10 @@ const TextContainer = styled.div`
   p{
     white-space: pre-line;
     margin: 20px 14% 20px 40px;
-    font-size: 1.3em;
+    font-size: 0.8em;
+    ${min.phone`font-size: 1em;`}
+    ${min.tablet`font-size: 1.1em;`}
+    ${min.desktop`font-size: 1em;`}
+    ${min.xl`font-size: 1.2em;`}
   }
 `

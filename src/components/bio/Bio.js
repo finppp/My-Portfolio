@@ -74,6 +74,9 @@ text-align: left;
     color: white;
     margin: 0 auto;
     font-size: 1.5em;
+    ${max.tablet`
+      font-size: 1em;
+      `}
   }
 `
 

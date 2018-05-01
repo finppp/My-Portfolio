@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import {Motion, spring} from 'react-motion';
 import media from '../../variables/mediaTemplates'
-
+import { min, max } from '../../variables/mediaTemplates'
 import SkillReadMoreSection from './SkillReadMoreSection';
 import * as colourSwatch from '../../variables/colours';
 import SkillsTitle from './SkillsTitle';
@@ -91,19 +91,26 @@ const SkillBox = styled.div`
   float: left;
   height: calc(100% / 3);
   width: calc(100% / 7);
+  ${max.tablet`
+    width: calc(100% / 5);
+  `}
   animation: ${slideIn} 1s forwards;
   transform: translateX(1000%);
-
   text-align: left;
-  ${'' /* margin: 0px 5px 5px 5px; */}
 
   p {
     transition: ease-out color 3s;
+    ${max.tablet`
+      font-size: 0.8em;
+    `}
+    ${max.phone`
+      font-size: 0.6em;
+    `}
+
   }
 
   img {
     transition: ease-out filter 2s;
-
   }
 
   &:hover p {

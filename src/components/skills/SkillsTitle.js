@@ -43,15 +43,24 @@ const Container = styled.div`
   float: left;
   display: block;
   width: calc(200% / 7);
+  ${
+    max.tablet`
+      width: calc(200% / 5);
+    `
+  }
+
   text-align: left;
   P {
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-user-select: none;
+    user-select: none;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
+    ${min.tablet`
+      font-size: 2em;
+    `}
     ${min.giant`
       font-size: 2.3em;
     `}
