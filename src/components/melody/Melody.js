@@ -182,7 +182,9 @@ class Melody extends Component {
             transitionEnter={true}
             transitionLeaveTimeout={500}
             transitionLeave={true}>
-          {this.state.displayOverlay && <MelodyOverlay hideOverlay={() => this.hideOverlay()}/>}
+          {this.state.displayOverlay && <MelodyOverlay
+            currentColour={this.props.currentColour}
+            hideOverlay={() => this.hideOverlay()}/>}
         </CSSTransitionGroup>
         <TopHalf>
           <h2>Leave a tune for the next visitor.</h2>
@@ -195,7 +197,8 @@ class Melody extends Component {
             saveMelody={() => this.saveMelodyToDatabase()}
             changeVolume={(volumeLevel) => this.changeVolume(volumeLevel)}
             currentVolumeLevel={this.state.volume}
-            savedToDatabase={this.state.savedToDatabase}/>
+            savedToDatabase={this.state.savedToDatabase}
+            currentColour={this.props.currentColour}/>
           <Sliders
             currentStep={this.state.counter}
             onMelodyChange={(args) => this.melodyChangeHandler(args)}
@@ -221,20 +224,11 @@ const Container = styled.section`
     height: 20%;`
   }
 
-  ${'' /* @media (max-width: 700px){
-    width: 100%;
-    height: 20%;
-  } */}
   height: 40%;
   display: inline-block;
-
   background-color: #1b3b71;
   transition: background-color 0.2s linear;
   ${props => 'background-color: ' + colourSwatch.activeColoursDark[props.currentColour]};
-
-
-  ${'' /* background: linear-gradient(to right, #1b3b71, #1f3966); */}
-
 
   p {
     margin: 0 auto;
@@ -245,10 +239,14 @@ const TopHalf = styled.div`
   width: 100%;
   h2 {
     margin: 0;
-    font-size: 2em;
     color: white;
     font-weight: 500;
     line-height: 200%;
+    font-size: 1.1em;
+    ${min.phone`font-size: 1.5em;`}
+    ${min.tablet`font-size: 2em;`}
+    ${min.desktop`font-size: 2em;`}
+    ${'' /* ${min.xl`font-size: 5em;`} */}
   }
 `
 const BottomHalf = styled.div`

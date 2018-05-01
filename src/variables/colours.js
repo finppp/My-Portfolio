@@ -13,10 +13,10 @@
 // ];
 
 export const colours = [
-  'rgb(172, 131, 255)',
-  'rgb(92, 255, 191)',
-  'rgb(255, 105, 178)',
-  'rgb(255, 203, 103)'
+  'rgb(255, 218, 93)',
+  'rgb(194, 165, 254)',
+  'rgb(121, 255, 202)',
+  'rgb(251, 137, 193)'
 ];
 
 export const greys = [
@@ -34,7 +34,7 @@ export const activeColours = [
 ];
 
 export const activeColoursDark = [
-  'rgb(99, 61, 130)',
+  'rgb(106, 87, 121)',
   'rgb(75, 53, 121)',
   'rgb(40, 103, 79)',
   '#73073d'

@@ -122,7 +122,7 @@ const DraggableObject = styled.div`
   width: 95%;
   height: 10%;
   ${'' /* border-radius: 10%; */}
-  background-color: rgb(99, 99, 99);
+  background-color: rgb(190, 190, 190);
   &:hover{
     background-color: rgb(112, 212, 255)
   }
