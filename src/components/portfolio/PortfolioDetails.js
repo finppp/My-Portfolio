@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { max, min } from '../../variables/mediaTemplates';
 
 class PortfolioDetails extends Component {
   render() {
@@ -27,9 +28,9 @@ class PortfolioDetails extends Component {
                 <StandBase></StandBase>
               </WebsiteImageContainer>
             </Screenshot>
-            <ToolsUsed>
+            {/* <ToolsUsed>
 
-            </ToolsUsed>
+            </ToolsUsed> */}
           </RightColumn>
         </BottomContainer>
       </ViewSlideContainer>
@@ -40,7 +41,8 @@ class PortfolioDetails extends Component {
 export default PortfolioDetails;
 
 const ViewSlideContainer = styled.div`
-  width: 70%;
+  width: 90%;
+  ${min.tablet`width:70%;`}
   height: 100%;
   display: inline-block;
   ${'' /* background-color: red; */}
@@ -53,11 +55,20 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   h2{
-    width: 20%;
+    width: 60%;
+    ${min.phone`width:60%;`}
+    ${min.tablet`width:50%;`}
+    ${min.desktop`width:40%;`}
+    ${min.xl`width:30%;`}
     margin: 10px;
     display: inline-block;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.5em;
+    ${min.phone`font-size: 2em;`}
+    ${'' /* ${min.tablet`width:50%;`}
+    ${min.desktop`width:40%;`}
+    ${min.xl`width:30%;`} */}
+
   }
   i{
     cursor: pointer;
@@ -69,14 +80,23 @@ const Title = styled.div`
 `
 
 const BottomContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${min.phone`flex-direction: row;`}
+
   height: 85%;
+  ${max.phone`height: 50%;`}
+
   width: 100%;
 `
 
 const LeftColumn = styled.div`
+
   float: left;
-  height: 100%;
-  width: 50%;
+  ${'' /* height: 100%; */}
+  width: 100%;
+  ${min.phone`width: 50%;`}
+  ${max.phone`order: 2;`}
 `
 
   const TextDetails = styled.div`
@@ -85,7 +105,9 @@ const LeftColumn = styled.div`
     p {
       white-space: pre-line;
       margin: 3% 10%;
-      font-size: 1.3em;
+      font-size: 1em;
+      ${min.phone`font-size: 1.3em;`}
+
     }
   `
   const Outlink = styled.div`
@@ -98,8 +120,10 @@ const LeftColumn = styled.div`
 
 const RightColumn = styled.div`
   display: inline-block;
-  height: 100%;
-  width: 50%;
+  ${'' /* height: 100%; */}
+  width: 100%;
+  margin-bottom: 200px;
+  ${min.phone`width: 50%;`}
 `
 
   const Screenshot = styled.div`

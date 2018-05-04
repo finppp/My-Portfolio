@@ -34,7 +34,9 @@ const AbsoluteContainer = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgb(135, 135, 135);
+  ${'' /* background-color: rgb(135, 135, 135); */}
+  background-color: rgb(152, 152, 152);
+
 `
 
 const TopSection = styled.div`

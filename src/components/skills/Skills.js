@@ -87,6 +87,7 @@ const SkillsContainer = styled.div`
 `
 
 const SkillBox = styled.div`
+  cursor: pointer;
   display: block;
   float: left;
   height: calc(100% / 3);
@@ -123,10 +124,12 @@ const SkillBox = styled.div`
   }
 
   &:nth-child(odd) {
-    background-color: rgb(106, 106, 106);
+    ${'' /* background-color: rgb(106, 106, 106); */}
+    background-color: rgb(124, 124, 124);
   }
   &:nth-child(even) {
-    background-color: rgb(136, 136, 136);
+    ${'' /* background-color: rgb(136, 136, 136); */}
+    background-color: rgb(97, 97, 97);
   }
 
   &:nth-child(1 ) { animation-delay:  1.1s}

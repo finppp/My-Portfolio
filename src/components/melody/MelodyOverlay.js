@@ -16,11 +16,8 @@ class MelodyOverlay extends Component {
         </div>
         <br/>
         <p>Step 1. Press <i className="fas fa-play-circle"></i> to hear the melody created by the last visitor to the website.</p>
-        <br/>
         <p>Step 2. Move the sliders up and down to change the pitch of each note in the melody.</p>
-        <br/>
         <p>Step 3. Press <i className="fas fa-play-circle"></i> again to hear the melody you have created.</p>
-        <br/>
         <p>Step 4. Press the <i class="far fa-save"></i> to save your melody for the next visitor.</p>
       </Container>
     );
@@ -38,10 +35,11 @@ const Container = styled.div`
   ${props => 'background-color: ' + colourSwatch.activeColours[props.currentColour]};
   ${'' /* background-color: ${props => props.}; */}
   p{
-    padding: 0 10%;
+    padding: 1% 10%;
     font-size: 0.7em;
     ${min.phone`font-size: 1em;`}
     ${min.tablet`font-size: 1.3em;`}
+    ${min.desktop`font-size: 1.1em;`}
 
   }
 `

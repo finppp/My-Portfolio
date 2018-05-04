@@ -35,6 +35,7 @@ const Container = styled.div`
 `
 
 const Button = styled.div`
+  cursor: pointer;
   border: none;
   outline: none;
   width: 90%;

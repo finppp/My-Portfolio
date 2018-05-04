@@ -21,6 +21,7 @@ const BlockContainer = styled.section `
   font-size: 16px;
   display: inline-block;
   background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   width: 50%;
   ${max.desktop`
     width: 100%;

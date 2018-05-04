@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import portfolioDetails from '../../variables/portfolioData';
 import PortfolioDetails from './PortfolioDetails'
 import * as colourSwatch from '../../variables/colours';
+import { max, min } from '../../variables/mediaTemplates';
 
 import styled from 'styled-components';
 
@@ -50,7 +51,7 @@ class PortfolioSlider extends Component {
       <Container>
         <PickerSection>
           <Title>
-            <h2>My Recent Work.</h2>
+            <h2>My recent work.</h2>
           </Title>
           <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 0} onClick={() => this.changePortfolioItem(0)} title={portfolioDetails[0].title}/>
           <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 1} onClick={() => this.changePortfolioItem(1)} title={portfolioDetails[1].title}/>
@@ -83,9 +84,7 @@ const Container = styled.div`
 const PickerSection = styled.div`
   float: left;
   width: 30%;
-  @media (max-width: 700px){
-    display: none;
-  }
+  ${max.tablet`display:none;`}
   height: 100%;
   ${'' /* background-color: orange; */}
 `

@@ -9,46 +9,46 @@ class Outlinks extends Component {
         {/* <div> */}
 
         <OutlinkQuadrant key={1}>
-          <a target="_blank" href="https://github.com/finppp">
+          <a rel="noopener" target="_blank" href="https://github.com/finppp">
           <h3>GitHub.
               <i className="hidden-xl far fa-arrow-alt-circle-right"></i>
           </h3>
         </a>
           <p>See some of my projects.</p>
-          <a target="_blank" href="https://github.com/finppp" className="underline hidden-sm">Lets go <i className="far fa-arrow-alt-circle-right"></i></a>
+          <a rel="noopener" target="_blank" href="https://github.com/finppp" className="underline hidden-sm">Lets go <i className="far fa-arrow-alt-circle-right"></i></a>
         </OutlinkQuadrant>
 
         <OutlinkQuadrant key={2}>
 
-          <a target="_blank" href="https://stackoverflow.com/users/2153716/finlay-percy">
+          <a rel="noopener" target="_blank" href="https://stackoverflow.com/users/2153716/finlay-percy">
             <h3>Stackoverflow.
               <i className="hidden-xl far fa-arrow-alt-circle-right"></i>
             </h3>
           </a>
           <p>Top 7% this year.</p>
-          <a target="_blank" href="https://stackoverflow.com/users/2153716/finlay-percy" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
+          <a rel="noopener" target="_blank" href="https://stackoverflow.com/users/2153716/finlay-percy" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
         </OutlinkQuadrant>
       {/* </div> */}
 
         {/* <div> */}
         <OutlinkQuadrant key={3}>
-          <a target="_blank" href="https://github.com/finppp/My-Portfolio">
+          <a rel="noopener" target="_blank" href="https://github.com/finppp/My-Portfolio">
             <h3>This GitHub repo.
               <i className="hidden-xl far fa-arrow-alt-circle-right"></i>
             </h3>
           </a>
           <p>Have a look at my ReactJS code.</p>
-          <a target="_blank" href="https://github.com/finppp/My-Portfolio" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
+          <a rel="noopener" target="_blank" href="https://github.com/finppp/My-Portfolio" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
         </OutlinkQuadrant>
 
         <OutlinkQuadrant key={4}>
-          <a target="_blank" href="https://www.linkedin.com/in/finlay-percy-8108207b/">
+          <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/finlay-percy-8108207b/">
             <h3>LinkedIn.
               <i className="hidden-xl far fa-arrow-alt-circle-right"></i>
             </h3>
           </a>
           <p>Read about my education and experience.</p>
-          <a target="_blank" href="https://www.linkedin.com/in/finlay-percy-8108207b/" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
+          <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/finlay-percy-8108207b/" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
         </OutlinkQuadrant>
       {/* </div> */}
       </OutlinksContainer>

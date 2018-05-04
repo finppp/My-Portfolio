@@ -63,7 +63,7 @@ const FullContainer = styled.section`
 const MiddleContainer = styled.section`
   font-size: 0;
   display: block;
-  overflow: auto;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   ${max.desktop`height: 200%;`}
@@ -75,9 +75,11 @@ const BottomContainer = styled.section`
   position: relative;
   font-size: 0;
   display: block;
-  overflow: hidden;
+  ${'' /* overflow: hidden; */}
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  height: 1px;
+  ${max.phone`height: 150%;`}
   margin: 0;
   ${'' /* background-color: teal; */}
 `

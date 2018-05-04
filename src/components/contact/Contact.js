@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import * as colourSwatch from '../../variables/colours';
-
+import { min, max } from '../../variables/mediaTemplates';
 
 class Contact extends Component {
 
@@ -9,7 +9,7 @@ class Contact extends Component {
     return (
       <Container currentColour={this.props.currentColour} name="contact">
         <Title>
-          <h2>Say Hello!</h2>
+          <h2>Say hello!</h2>
         </Title>
         <ContactDetails>
           <h2><i className="far fa-envelope"></i> <a target="_blank" rel="noopener noreferrer" href="mailto:finlaypercy@hotmail.com?Subject=Hi%20Finlay">fin@foldedgroup.com</a></h2>
@@ -46,6 +46,8 @@ const Title = styled.div`
 `
 const ContactDetails = styled.div`
   display: flex;
+  flex-direction: column;
+  ${min.tablet`flex-direction: row;`}
   justify-content: center;
   align-items: center;
   font-size: 16px;
@@ -58,6 +60,8 @@ const ContactDetails = styled.div`
     width: 100%;
     font-weight: 400;
     margin: auto 5px;
-    font-size: 2em;
+    font-size: 1.2em;
+    ${min.phone`font-size: 1.5em;`}
+    ${min.tablet`font-size: 2em;`}
   }
 `
