@@ -15,11 +15,11 @@ class Bio extends Component {
             <p>About me.</p>
           </TitleContainer>
           <BioTextContainer>
-            <p>I am a web developer specialising in JavaScript and ReactJS. With over 5 years experience working closely on a wide range of projects.</p>
+            <p>I am a web developer specialising in JavaScript and ReactJS. With over 5 years experience working on a wide range of projects.</p>
             <br/>
-            <p>I have designed web applications from database structuring to planning launch strategies. Fullstack and further.</p>
+            <p>I have designed and built web applications from start to finish. I have had responsibilities ranging from database structuring & security, building & testing code, through to planning launch strategies and support. Fullstack and beyond.</p>
             <br/>
-            <p>Living in London. Looking for work iat somewhere really cool.</p>
+            <p>Living in London. Looking to join a wonderful company.</p>
           </BioTextContainer>
         </TopHalf>
         <BottomHalf currentColour={this.props.currentColour}>

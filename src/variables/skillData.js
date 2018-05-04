@@ -16,6 +16,7 @@ import sassSVG from '../icons/sass.svg'
 import arduinoSVG from '../icons/arduino.svg'
 import audioSVG from '../icons/audio.svg'
 import cordovaSVG from '../icons/cordova.svg'
+import webpackSVG from '../icons/webpack.svg'
 
 const skillData = [
   {
@@ -107,12 +108,13 @@ const skillData = [
   {
     title: `Digital Audio & DSP`,
     icon: audioSVG,
-    description: `With a BSc in Music and Audio Technology I have excellent knowledge of how audio systems work. Using software such as Max to design signal flows. Through to implementing These designs in web applications using JavaScript. I have written beat detection algorithms in JavaScript, which have been used in my Android applications I have written. `
+    description: `With a BSc in Music and Audio Technology I have excellent knowledge of how audio systems work. Using software such as Max to design signal flows. Through to implementing these designs in web applications using JavaScript. I have written beat detection algorithms in JavaScript, which have been used in my Android applications I have written. `
   },
   {
-    title: `Gulp & Grunt`,
-    icon: audioSVG,
-    description: `lorem`
+    title: `Gulp, Grunt & Webpack`,
+    icon: webpackSVG,
+    description: `I have used a range of build tools and task runners, all great for automating tasks and saving time.
+    Although Gulp, Grunt and Webpack have their similarities, Webpacks hot and live reloading really makes it stand out from the crowd.`
   },
 ]
 

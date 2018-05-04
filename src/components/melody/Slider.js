@@ -114,6 +114,7 @@ const SliderContainer = styled.div`
 // `
 
 const DraggableObject = styled.div`
+  cursor: grab;
   transition: background-color 0.2s ease-out;
   ${'' /* border-radius: 10px 0px 0px 10px; */}
   margin-left: 5%;
@@ -124,10 +125,12 @@ const DraggableObject = styled.div`
   ${'' /* border-radius: 10%; */}
   background-color: rgb(190, 190, 190);
   &:hover{
-    background-color: rgb(112, 212, 255)
+    background-color: rgb(112, 212, 255);
   }
   &:active{
-    background-color: rgb(112, 212, 255)
+    background-color: rgb(112, 212, 255);
+    cursor: grabbing;
+
  }
 `
 

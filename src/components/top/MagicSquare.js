@@ -78,6 +78,7 @@ export default MagicSquare;
 
 
 const BoxDiv = styled.div`
+  user-select: none;
   border-radius: 0.0vw;
   display: inline-block;
   width: 4.8vw;
