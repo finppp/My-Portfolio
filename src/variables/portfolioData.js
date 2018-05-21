@@ -7,17 +7,17 @@ import telscombe from '../images/telscombe/telscombe-home.png';
 import tshirt from '../images/tshirt/tshirt-home.png';
 
 const portfolioDetails = [
+
   {
-    title: `The Cake Valley`,
-    screenshots: [cakevalley],
-    bio: `A website for a catering and afternoon teas company in Ipswich.
+    title: `RowSquad`,
+    screenshots: [rowsquad],
+    bio: `Launched in early 2018, RowSquad is a web app for connecting rowers and coaches.
 
-    This is a simple brochure style site showing what the company has to offer.
+    This platform simplifies the process of recording and analysing training data.
 
-    Created using Wordpress, HTML, Sass and PHP.`,
-    url: `http://thecakevalley.co.uk/`
+    Created using ReactJS, Styled Components and Firebase.`,
+    url: `https://rowsquad.com/`
   },
-
   {
     title: `MyBoathouse`,
     screenshots: [boathouse],
@@ -39,6 +39,16 @@ const portfolioDetails = [
     url: `https://foldedgroup.com/`
   },
   {
+    title: `The Cake Valley`,
+    screenshots: [cakevalley],
+    bio: `A website for a catering and afternoon teas company in Ipswich.
+
+    This is a simple brochure style site showing what the company has to offer.
+
+    Created using Wordpress, HTML, Sass and PHP.`,
+    url: `http://thecakevalley.co.uk/`
+  },
+  {
     title: `Paddywack Prints`,
     screenshots: [paddywack],
     bio: `An e-commerce shop selling prints of illustrations and photography.
@@ -49,14 +59,14 @@ const portfolioDetails = [
     url: `https://paddywackprints.co.uk/`
   },
   {
-    title: `RowSquad`,
-    screenshots: [rowsquad],
-    bio: `Launched in early 2018, RowSquad is a web app for connecting rowers and coaches.
+    title: `Tshirt.co.uk`,
+    screenshots: [tshirt],
+    bio: `A website for a t-shirt printing company based in London.
 
-    This platform simplifies the process of recording and analysing training data.
+    I gave this website a complete renovation from its original website created in 2000
 
-    Created using ReactJS, Styled Components and Firebase.`,
-    url: `https://rowsquad.com/`
+    Created using CSS, HTML and Javascript.`,
+    url: `http://www.tshirt.co.uk/`
   },
   {
     title: `Telscombe Village`,
@@ -67,16 +77,6 @@ const portfolioDetails = [
 
     Created using HTML, Sass, PHP and WordPress.`,
     url: `https://telscombevillageclub.co.uk/`
-  },
-  {
-    title: `Tshirt.co.uk`,
-    screenshots: [tshirt],
-    bio: `A website for a t-shirt printing company based in London.
-
-    I gave this website a complete renovation from its original website created in 2000
-
-    Created using CSS, HTML and Javascript.`,
-    url: `http://www.tshirt.co.uk/`
   }
 ]
 

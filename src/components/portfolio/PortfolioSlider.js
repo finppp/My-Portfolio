@@ -11,7 +11,7 @@ class PortfolioSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPorfolioItem: 2
+      currentPorfolioItem: 0
     };
   }
 

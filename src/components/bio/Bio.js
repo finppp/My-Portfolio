@@ -15,11 +15,11 @@ class Bio extends Component {
             <p>About me</p>
           </TitleContainer>
           <BioTextContainer>
-            <p>I am a web developer specialising in JavaScript and ReactJS. With over 5 years experience working on a wide range of projects.</p>
+            <p>I’m a London-based web developer specialising in JavaScript and ReactJS, with over 5 years’ experience working on a variety of projects.</p>
             <br/>
-            <p>I have designed and built web applications from start to finish. I have had responsibilities ranging from database structuring & security, building & testing code, through to planning launch strategies and support. Fullstack and beyond.</p>
-            <br/>
-            <p>Living in London. Looking to join a wonderful company.</p>
+            <p>I’ve designed and built web applications from start to finish, with responsibilities in database structuring and security, building and testing code, and planning launch strategies and support - fullstack and beyond.</p>
+            {/* <br/> */}
+            {/* <p>Living in London. Looking to join a wonderful company.</p> */}
           </BioTextContainer>
         </TopHalf>
         <BottomHalf currentColour={this.props.currentColour}>
@@ -52,7 +52,6 @@ const TopHalf = styled.section`
   background-color: #4981c9;
   transition: background-color 0.2s linear;
   background-color: ${props => colourSwatch.activeColoursDark[props.currentColour]};
-
   height: 50%;
   width: 100%
 `

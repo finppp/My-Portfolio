@@ -12,8 +12,8 @@ class Contact extends Component {
           <h2>Say hello!</h2>
         </Title>
         <ContactDetails>
-          <h2><i className="far fa-envelope"></i> <a target="_blank" rel="noopener noreferrer" href="mailto:finlaypercy@hotmail.com?Subject=Hi%20Finlay">fin@foldedgroup.com</a></h2>
-          <h2><i className="fas fa-phone"></i> <a href="tel:+4475905249489">07595 249489</a></h2>
+          <h2><i className="far fa-envelope"></i> <a target="_blank" rel="noopener noreferrer" href="mailto:ﬁnlaypercy@gmail.com?Subject=Hi%20Finlay">ﬁnlaypercy@gmail.com</a></h2>
+          <h2><i className="fas fa-phone"></i> <a href="tel:+447595249489">07595 249489</a></h2>
         </ContactDetails>
       </Container>
     );
