@@ -98,7 +98,6 @@ class Melody extends Component {
   playMelody = () => {
 
     this.audioCtx.resume()
-    console.log("hello")
     let counter = 0;
     this.setState({counter});
     let visualPulse = setInterval(() => {
@@ -107,7 +106,6 @@ class Melody extends Component {
       }
       counter++;
       this.setState({counter});
-      console.log("hello")
     }, 250)
 
 
@@ -151,14 +149,12 @@ class Melody extends Component {
   }
 
   melodyChangeHandler = (sliderData) => {
-    // console.log(sliderData);
     let newSliderValues = this.state.melody;
     newSliderValues[sliderData.sliderId] = sliderData.sliderValue;
     this.setState({
       melody: newSliderValues,
       savedToDatabase: false
     })
-     // console.log(sliderData);
   }
 
   showOverlay = () => {

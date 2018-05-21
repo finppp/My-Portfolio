@@ -16,7 +16,6 @@ class PortfolioSlider extends Component {
   }
 
   changePortfolioItem = (newItem) => {
-    console.log("newItem");
     this.setState({
       currentPorfolioItem: newItem
     })
@@ -101,7 +100,6 @@ const Title = styled.div`
 
 class Pick extends Component {
   render() {
-    console.log(this.props.currentColour);
     return (
       <PickContainer onClick={this.props.onClick} active={this.props.active}>
         <SlideContainer className="slides" active={this.props.active}>

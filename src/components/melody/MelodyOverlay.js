@@ -7,7 +7,6 @@ import * as colourSwatch from '../../variables/colours';
 class MelodyOverlay extends Component {
 
   render() {
-    console.log(this.props.currentColour);
     return (
       <Container currentColour={this.props.currentColour}>
         <div>

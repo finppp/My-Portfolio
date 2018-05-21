@@ -35,7 +35,6 @@ class MagicSquares extends Component {
       self.setState({
         magicSquares: newArray
       })
-      // console.log(snapshot.key, snapshot.val());
     })
 
   }

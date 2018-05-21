@@ -34,7 +34,6 @@ class Skills extends Component {
       selectedSkill: skill
 
     })
-     console.log(skill);
   }
 
   closeReadMore = () => {

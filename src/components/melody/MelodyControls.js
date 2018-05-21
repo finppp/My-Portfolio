@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { min, max } from '../../variables/mediaTemplates';
 class MelodyControls extends Component {
 
-  test = (event) => {
-    console.log(event.target.value);
-  }
-
   render() {
     return (
       <Container>
