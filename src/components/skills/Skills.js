@@ -45,12 +45,13 @@ class Skills extends Component {
 
   render() {
     const skills = skillData.map((skill, key) =>
-      <SkillBox onClick={() => this.openReadMore(skill)}>
+      <SkillBox>
+      {/* <SkillBox onClick={() => this.openReadMore(skill)}> */}
         <SkillText>{skill.title}</SkillText>
         <IconContainer>
           <Icon src={skill.icon} />
         </IconContainer>
-        <ReadMore>Read More</ReadMore>
+        {/* <ReadMore>Read More</ReadMore> */}
       </SkillBox>
     )
 
@@ -66,9 +67,9 @@ class Skills extends Component {
         >
           {this.state.displayOverlay && <SkillReadMoreSection skillData={this.state.selectedSkill} onCloseOverlay={() => this.closeReadMore()} />}
         </CSSTransitionGroup>
-        <SkillsTitle text="Things I'm good at."/>
+        <SkillsTitle text="Things I'm good at"/>
         {skills}
-        <SkillsTitle text="Bits I'm working on."/>
+        {/* <SkillsTitle text="To name a few"/> */}
       </SkillsContainer>
     );
   }
@@ -87,7 +88,7 @@ const SkillsContainer = styled.div`
 `
 
 const SkillBox = styled.div`
-  cursor: pointer;
+  ${'' /* cursor: pointer; */}
   display: block;
   float: left;
   height: calc(100% / 3);
@@ -100,7 +101,7 @@ const SkillBox = styled.div`
   text-align: left;
 
   p {
-    transition: ease-out color 3s;
+    transition: ease-out color 2s;
     ${max.tablet`
       font-size: 0.8em;
     `}
@@ -151,6 +152,8 @@ const SkillBox = styled.div`
   &:nth-child(17) { animation-delay: 2.7s}
   &:nth-child(18) { animation-delay: 2.8s}
   &:nth-child(19) { animation-delay: 2.9s}
+  &:nth-child(20) { animation-delay: 3s}
+  &:nth-child(21) { animation-delay: 3.1s}
 
   &:nth-child(4n-3) {
     &:hover p {

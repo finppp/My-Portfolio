@@ -187,7 +187,7 @@ class Melody extends Component {
             hideOverlay={() => this.hideOverlay()}/>}
         </CSSTransitionGroup>
         <TopHalf>
-          <h2>Leave a tune for the next visitor.</h2>
+          <h2>Leave a tune for the next visitor</h2>
         </TopHalf>
         <BottomHalf>
           <MelodyControls

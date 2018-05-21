@@ -12,7 +12,7 @@ class Bio extends Component {
       <BlockContainer name="bio">
         <TopHalf currentColour={this.props.currentColour}>
           <TitleContainer>
-            <p>About me.</p>
+            <p>About me</p>
           </TitleContainer>
           <BioTextContainer>
             <p>I am a web developer specialising in JavaScript and ReactJS. With over 5 years experience working on a wide range of projects.</p>

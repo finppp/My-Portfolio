@@ -5,7 +5,7 @@ class Outlinks extends Component {
   render() {
     return (
       <OutlinksContainer name="outlinks">
-        <h2>See me around the web.</h2>
+        <h2>See me around the web</h2>
         {/* <div> */}
 
         <OutlinkQuadrant key={1}>
@@ -25,7 +25,7 @@ class Outlinks extends Component {
               <i className="hidden-xl far fa-arrow-alt-circle-right"></i>
             </h3>
           </a>
-          <p>Top 7% this year.</p>
+          <p>Top 6% this year.</p>
           <a rel="noopener" target="_blank" href="https://stackoverflow.com/users/2153716/finlay-percy" className="underline hidden-sm">Lets go <i className="hidden-sm far fa-arrow-alt-circle-right"></i></a>
         </OutlinkQuadrant>
       {/* </div> */}

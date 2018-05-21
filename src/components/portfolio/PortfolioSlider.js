@@ -51,7 +51,7 @@ class PortfolioSlider extends Component {
       <Container>
         <PickerSection>
           <Title>
-            <h2>My recent work.</h2>
+            <h2>My recent work</h2>
           </Title>
           <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 0} onClick={() => this.changePortfolioItem(0)} title={portfolioDetails[0].title}/>
           <Pick currentColour={this.props.currentColour} active={this.state.currentPorfolioItem == 1} onClick={() => this.changePortfolioItem(1)} title={portfolioDetails[1].title}/>

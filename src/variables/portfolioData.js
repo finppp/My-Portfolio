@@ -10,31 +10,32 @@ const portfolioDetails = [
   {
     title: `The Cake Valley`,
     screenshots: [cakevalley],
-    bio: `A simple brochure style website for a catering and afternoon teas company.
+    bio: `A website for a catering and afternoon teas company in Ipswich.
 
-    From planning design with the client, to installing the SSL certificate.
+    This is a simple brochure style site showing what the company has to offer.
 
-    A clean and simple website created using the Wordpress CMS.`,
-    tools: [],
+    Created using Wordpress, HTML, Sass and PHP.`,
     url: `http://thecakevalley.co.uk/`
   },
 
   {
     title: `MyBoathouse`,
     screenshots: [boathouse],
-    bio: `A classifieds website for rowing boats, equipment and jobs.
+    bio: `A classifieds website advertising rowing boats, equipment and jobs.
 
     This web application has a wide range of features implemented using Firebase database to serve dynamic content.
 
-    Created using: HTML, CSS, Vanilla JavaScript, Firebase.`,
-    tools: [],
+    Created using HTML, CSS, Vanilla JavaScript, Firebase.`,
     url: `https://myboathouse.co.uk/`
   },
   {
     title: `Folded Group`,
     screenshots: [folded],
-    bio: `A fun and colourful website to promoting Folded Group, a web design company.`,
-    tools: [],
+    bio: `A fun and colourful website promoting Folded Group, a web design company.
+
+    This website was designed to create a memorable experience to visitors.
+
+    Created using HTML, CSS, JavaScript and jQuery.`,
     url: `https://foldedgroup.com/`
   },
   {
@@ -42,19 +43,19 @@ const portfolioDetails = [
     screenshots: [paddywack],
     bio: `An e-commerce shop selling prints of illustrations and photography.
 
-    Created using Woocommerce, and e-commerce platform built on Wordpress.
+    Created using Woocommerce, an e-commerce platform built on Wordpress.
 
     Launching June 2018.`,
-    tools: [],
     url: `https://paddywackprints.co.uk/`
   },
   {
     title: `RowSquad`,
     screenshots: [rowsquad],
-    bio: `A web application for recording, and presenting training data between coaches and athletes.
+    bio: `Launched in early 2018, RowSquad is a web app for connecting rowers and coaches.
 
-    Created using ReactJS & Firebase.`,
-    tools: [],
+    This platform simplifies the process of recording and analysing training data.
+
+    Created using ReactJS, Styled Components and Firebase.`,
     url: `https://rowsquad.com/`
   },
   {
@@ -62,17 +63,19 @@ const portfolioDetails = [
     screenshots: [telscombe],
     bio: `A website to promote a local village club.
 
-    Created using the WordPress.`,
-    tools: [],
+    This website features an online booking system. Allowing users to add events to the club calendar.
+
+    Created using HTML, Sass, PHP and WordPress.`,
     url: `https://telscombevillageclub.co.uk/`
   },
   {
     title: `Tshirt.co.uk`,
     screenshots: [tshirt],
-    bio: `A website for a t-shirt printing company.
-    
+    bio: `A website for a t-shirt printing company based in London.
+
+    I gave this website a complete renovation from its original website created in 2000
+
     Created using CSS, HTML and Javascript.`,
-    tools: [],
     url: `http://www.tshirt.co.uk/`
   }
 ]
